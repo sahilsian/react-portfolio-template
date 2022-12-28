@@ -1,0 +1,76 @@
+import React from 'react';
+import styled from 'styled-components';
+import config from '../../../config.json';
+import Icon from '../../individual-components/icon';
+import PillCard from '../../individual-components/pill-card';
+import { useRouter } from 'next/router'
+import TextLabel from '../../individual-components/text-label';
+import CustomButton from '../../individual-components/custom-button';
+
+const Container = styled.div`
+    width: 100%;
+    padding: 50px 0px;
+`;
+
+const Margin = styled.div`
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+`;
+
+const Contain = styled.div`
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px;
+`;
+
+const TeamLayout = () => {
+    const router = useRouter()
+    return (
+        <Container>
+            <TextLabel
+            text={"Meet the Team"}
+            color={config.navigation.colors.text}
+            padding={"100px"}
+            labelsize={"48px"}
+            weight={"700"}
+            center
+            >
+            </TextLabel>
+            <Margin>
+                {config.team.team.map((e) => {
+                    return (
+                        <PillCard
+                        name={e.name}
+                        description={e.description}
+                        img={e.img}
+                        >
+                        {
+                        e.icons.map((e)=> {
+                            return (
+                                <Icon src={e.img} onClick={()=> {
+                                    router.push(e.url)
+                                }}></Icon>
+                            )
+                        })
+                        }
+                        </PillCard>
+                    )
+                    })
+                }
+            </Margin>
+            <Contain>
+                <CustomButton width={"150px"} outlined text={config.team.text.button}></CustomButton>
+            </Contain>
+        </Container>
+    )
+}
+
+export default TeamLayout

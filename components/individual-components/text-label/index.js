@@ -10,15 +10,21 @@ const Label = styled.p`
     margin: 0;
     color: ${props=>props.color ? props.color : "#ffffff" };
     font-size: ${props=>props.labelsize ? props.labelsize : "16px"};
-    font-weight: 500;
+    font-weight: ${props=>props.weight ? props.weight : "500"};
     padding-bottom: ${props=>props.padding ? props.padding : "7px"};
     text-align: ${props=>props.center ? "center" : "left"};
+    transition: 0.2s all ease;
+
+    &:hover {
+        color: ${props=>props.hover ? props.hover : props.color};
+        transition: 0.2s all ease;
+    }
 `;
 
-const TextLabel = ({text, center, labelsize, color, padding}) => {
+const TextLabel = ({text, center, labelsize, color, padding, weight, hover}) => {
     return (
         <Container>
-            <Label center={center} color={color} padding={padding} labelsize={labelsize}>{text}</Label>
+            <Label hover={hover} weight={weight} center={center} color={color} padding={padding} labelsize={labelsize}>{text}</Label>
         </Container>
     )
 }

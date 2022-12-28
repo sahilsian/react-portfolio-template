@@ -11,15 +11,26 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
   poistion: relative;
 `;
 
 const Video = styled.video`
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
+  min-width: 100%; 
+  min-height: 100%; 
+  width: auto;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  
 `;
 
 const Overlay = styled.div`
@@ -32,9 +43,7 @@ const Overlay = styled.div`
 
 const VideoHero = () => {
     const videoRef= useRef();
-    const setPlayBack = () => {
-        videoRef.current.playbackRate = 0.7;
-    };
+    
 
   return (
     <Wrapper>
@@ -43,7 +52,6 @@ const VideoHero = () => {
         <Video
          src={config.hero.video} 
          ref={videoRef}
-         onCanPlay={() => setPlayBack()}
          autoPlay loop controls={false}></Video>
       </Container>
     </Wrapper>

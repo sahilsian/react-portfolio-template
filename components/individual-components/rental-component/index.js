@@ -3,12 +3,16 @@ import styled from 'styled-components'
 import CustomButton from '../custom-button';
 import InputComponent from '../Input-Component';
 import config from '../../../config.json'
+import useWindowDimensions from '../../../hooks/useWIndowDimensions';
 
 const Container = styled.div`
     width: 100%;
     position: absolute;
-    z-index: 4;
-    top: -110px;    
+    z-index: 12;
+    top: -130px;
+    display: block;
+    padding: 0px 20px;
+    box-sizing: border-box;
 `;
 
 const Comp = styled.div`
@@ -25,11 +29,13 @@ const Comp = styled.div`
     display: flex;
     align-items: flex-end;
     gap: 20px;
+    box-sizing: border-box;
 `;
 
 
 
 const RentalComponent = ({bgcolor}) => {
+    const {width, height} = useWindowDimensions()
     return (
         <Container>
             <Comp>
@@ -43,7 +49,7 @@ const RentalComponent = ({bgcolor}) => {
                 <CustomButton 
                     text={config.rental.text.button_search}
                     height={"35px"}
-                    width={"160px"}
+                    width={"240px"}
                 ></CustomButton>
             </Comp>
         </Container>

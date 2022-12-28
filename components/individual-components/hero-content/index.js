@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import config from '../../../config.json'
 import CarCardLarge from '../car-card-large';
 import CustomButton from '../custom-button';
+import useWindowDimensions from '../../../hooks/useWIndowDimensions';
 
 const Container = styled.div`
     width: 100%;
@@ -13,6 +14,8 @@ const Container = styled.div`
     z-index: 4;
     display: flex;
     gap: 20px;
+    box-sizing: border-box;
+    flex-direction: ${props=>props.direction ? "column-reverse": "row"};
 `;
 
 const FlexContainer = styled.div`
@@ -22,6 +25,7 @@ const FlexContainer = styled.div`
     justify-content: center;
     flex-direction: ${props=>props.direction ? "column" : "row"};
     justify-content: ${(props) => (props.justify ? "flex-end" : "center")};
+    align-items: ${props=>props.center ? "center" : "start"};
 `;
 
 const PrimaryText = styled.h1`
@@ -30,6 +34,7 @@ const PrimaryText = styled.h1`
     font-size: 64px;
     line-height: 78px;
     padding-bottom: 12px;
+    text-align: ${props=>props.center ? "center" : "left"};
 `;
 
 const SecondaryText = styled.h2`
@@ -38,6 +43,7 @@ const SecondaryText = styled.h2`
     font-size: 22px;
     font-weight: 400;
     padding-bottom: 33px;
+    text-align: ${props=>props.center ? "center" : "left"};
 `;
 
 const HighlightedWord = styled.span`
@@ -54,10 +60,11 @@ const Accent = styled.img`
 `;
 
 const HeroContent = () => { 
+    const {width, height} = useWindowDimensions();
     return (
-        <Container>
-            <FlexContainer direction flexedit flex={2}>
-                <PrimaryText>
+        <Container direction={width < 1100 ? true : false}>
+            <FlexContainer center={width < 1100} justify={width < 1100 ? true : false} direction flexedit flex={2}>
+                <PrimaryText center={width < 1100 ? true : false}>
                     {config.hero.text.primary.replace(config.hero.text.highlighted_word_primary, "")}
                     <HighlightedWord>
                         {config.hero.text.highlighted_word_primary}
@@ -65,7 +72,7 @@ const HeroContent = () => {
                     </HighlightedWord>
                 </PrimaryText>
 
-                <SecondaryText>
+                <SecondaryText center={width < 1100}>
                     {config.hero.text.secondary}
                 </SecondaryText>
                 <CustomButton width={"200px"} text={config.hero.text.cta_button}>
@@ -73,7 +80,7 @@ const HeroContent = () => {
                 </CustomButton>
             </FlexContainer>
                 
-            <FlexContainer justify flex={1} flexedit>
+            <FlexContainer justify={width < 1100 ? false : true} flex={1} flexedit>
                 <CarCardLarge>
                 </CarCardLarge>
             </FlexContainer>

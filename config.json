@@ -5,7 +5,7 @@
             "primary": "#04060A",
             "secondary": "#FFFFFF",
             "text": "#04060A",
-            "subtext": "#04060A40",
+            "subtext": "#04060A60",
             "accent": "#4AAF6E"
         },
         "tabs": [
@@ -111,6 +111,193 @@
             "button_search": "Find your Rental",
             "search_engine_header": "Search Results"
         }
-        
+    },
+    "side_one": {
+        "text": {
+            "title": "Operating 24/7",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "description_title": "Greenclick Valet Kiosk",
+            "description_description": "The Greenclick Valet Kiosk stores your rental keys and is located inside the hotel lobby. You can access and return keys into the box by using our Greenclick App."
+        },
+        "images": {
+            "image1": "/gcbox.png"
+        }
+    },
+    "side_two": {
+        "text": {
+            "title": "Smart Cars, E-Bikes & More",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "description_title": "Veemo E-Bike",
+            "description_description": "Coming Soon."
+        },
+        "images": {
+            "image1": "/veemo.png"
+        }
+    },
+    "banner_app": {
+        "text": {
+            "title": "Confirm your Order on our Upcoming App",
+            "description": "Our app will be available on the AppStore & PlayStore where you will be able to purchase your vehicle to rent."
+        },
+        "images": {
+            "image1": "/phone.png"
+        }
+    },
+    "team": {
+        "team": [
+            {
+                "name": "Brian Cordero",
+                "description": "Founder & CEO",
+                "img": "/brian.png",
+                "icons": [
+                    {
+                        "img": "/linkedin.svg",
+                        "url": "https://www.linkedin.com/in/brian-cordero-5a7a8416b/"
+                    }
+                ]
+            },
+            {
+                "name": "Sahil Sian",
+                "description": "Technical Co-Founder & CTO",
+                "img": "/sahil.jpg",
+                "icons": [
+                    {
+                        "img": "/linkedin.svg",
+                        "url": "https://www.linkedin.com/in/sahil-sian-5305b7198/"
+                    },
+                    {
+                        "img": "/code.svg",
+                        "url": "https://cssahil.com"
+                    },
+                    {
+                        "img": "/github.svg",
+                        "url": "https://github.com/sahilsian"
+                    }
+                ]
+            },
+            {
+                "name": "Max Zhang",
+                "description": "CFO",
+                "img": "/max.jpg",
+                "icons": [
+                    {
+                        "img": "/linkedin.svg",
+                        "url": "https://www.linkedin.com/in/zhang-max/"
+                    }
+                ]
+            },
+            {
+                "name": "Shadat Rahman",
+                "description": "Senior Software Engineer",
+                "img": "/default.jpg",
+                "icons": [
+                    {
+                        "img": "/linkedin.svg",
+                        "url": "https://www.linkedin.com/in/shadat-rahman/"
+                    },
+                    {
+                        "img": "/github.svg",
+                        "url": "https://github.com/sahilsian"
+                    }
+                ]
+            }
+        ],
+        "text": {
+            "button": "Learn More"
+        }
+    },
+    "footer": {
+        "images": {
+            "backdrop": "/cityscape.svg"
+        },
+        "social": [
+            {
+                "img": "/linkedin.svg",
+                "url": "https://www.linkedin.com/company/greenclick-technologies/"
+            },
+            {
+                "img": "/twitter.svg",
+                "url": "https://twitter.com/greenclicktech"
+            },
+            {
+                "img": "/instagram.svg",
+                "url": "https://www.instagram.com/greenclicktechnologies/"
+            }
+        ],
+        "tabs": [
+            {
+                "name": "Products & Services",
+                "tabs": [
+                    {
+                        "name": "Valet Box",
+                        "description": "Greenclick's on demand car rental solution",
+                        "link": ""
+                    },
+                    {
+                        "name": "Car Fleets",
+                        "description": "Our car fleets we deliver",
+                        "link": ""
+                    },
+                    {
+                        "name": "App & Technology",
+                        "description": "Our technical solutions to scale",
+                        "link": ""
+                    },
+                    {
+                        "name": "Customer Relationships",
+                        "description": "Building strong customer relationships",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Company",
+                "tabs": [
+                    {
+                        "name": "About",
+                        "description": "About Greenclick",
+                        "link": ""
+                    },
+                    {
+                        "name": "Leadership",
+                        "description": "How we're changing the landscape of car rentals",
+                        "link": ""
+                    },
+                    {
+                        "name": "Blog",
+                        "description": "See what greenclick is up to",
+                        "link": ""
+                    },
+                    {
+                        "name": "Careers",
+                        "description": "Start your career at Greenclick",
+                        "link": ""
+                    }
+                ]
+            },
+            {
+                "name": "Contact",
+                "tabs": [
+                    {
+                        "name": "Support",
+                        "description": "Get help with our dedicated support team",
+                        "link": ""
+                    },
+                    {
+                        "name": "Status",
+                        "description": "Greenclick server status",
+                        "link": ""
+                    },
+                    {
+                        "name": "Contact Us",
+                        "description": "Want to work with greenclick, contact us",
+                        "link": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "head": {
+        "title": "Greenclick Technologies"
     }
 }

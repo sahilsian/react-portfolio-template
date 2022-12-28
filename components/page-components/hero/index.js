@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import HeroContent from '../../individual-components/hero-content';
 import VideoHero from '../../individual-components/video-hero';
+import useWindowDimensions from '../../../hooks/useWIndowDimensions';
 
 const Wrapper = styled.div`
     position: relative;
@@ -14,6 +15,7 @@ const Wrapper = styled.div`
 `;
 
 const Hero = () => {
+    const {width, height} = useWindowDimensions()
     return (
         <Wrapper>
             <VideoHero>

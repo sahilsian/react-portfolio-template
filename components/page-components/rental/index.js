@@ -6,6 +6,8 @@ import Search from '../../individual-components/search';
 const Container = styled.div`
     width: 100%;
     position: relative;
+    padding-bottom: 50px;
+    box-sizing: border-box;
 `;
 
 const Rental = () => {

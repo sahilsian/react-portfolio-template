@@ -1,12 +1,28 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import config from '../../../config.json'
+import useWindowDimensions from '../../../hooks/useWIndowDimensions';
 
 const Wrapper = styled.div`
     width: 360px;
-    height: auto;
-    box-shadow: rgba(0, 0, 0, 0.55) 0px 3px 8px;
+    height: ${props=>props.height ? props.height : "auto"};
+    box-shadow:
+    rgba(0, 0, 0, 0.24) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.5) 0px 1px 0px 0px,
+    rgba(0, 0, 0, 0.3) 0px 0px 8px 0px,
+    rgba(0, 0, 0, 0.5) 0px 20px 30px 0px;
+    transition: transform 1s ease 0s;
     border-radius: 16px;
+    transform:
+    perspective(800px)
+    rotateY(-8deg);
+
+    &:hover {
+        transform: perspective(800px) rotateY(-4deg);
+      }
+
+    display: ${props=>props.display ? "none": "block"};
+
 `;
 
 const Container = styled.div`
@@ -77,7 +93,7 @@ const Dot = styled.div`
 `
 
 const Image = styled.img`
-    width: 530px;
+    width: ${props=> props.width < 1650 ? "360px" : "530px"};
     display: block;
 `;
 
@@ -98,9 +114,11 @@ const images = [
 
 const CarCardLarge = () => {
     const [selectedCar, setSelectedCar] = useState(0)
+    const { width, height } = useWindowDimensions();
+
     return (
-        <Wrapper>
-        <Image src={'/map.png'}></Image>
+        <Wrapper display={width < 1100} height={width < 1100 ? "300px" : false}>
+        <Image width={width} src={width < 1650 ? '/map-no-banner.png' : '/map.png'}></Image>
         <Container>
             <Title>{config.hero.cars[selectedCar].name}</Title>
             <ContainerNested>

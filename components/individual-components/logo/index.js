@@ -8,6 +8,7 @@ const LogoContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: ${props=>props.paddingbottom};
 `;
 
 const LogoImage = styled.img`
@@ -16,9 +17,9 @@ const LogoImage = styled.img`
     resize-mode: contain;
 `;
 
-const Logo = ({image}) => {
+const Logo = ({image, paddingbottom}) => {
     return (
-        <LogoContainer>
+        <LogoContainer paddingbottom={paddingbottom}>
             <LogoImage src={image}></LogoImage>
         </LogoContainer>
     )

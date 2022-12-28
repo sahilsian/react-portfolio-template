@@ -4,18 +4,19 @@ import GoogleMapReact from "google-map-react";
 import MapItem from "../map-item";
 import TextLabel from "../text-label";
 import config from '../../../config.json'
+import useWindowDimensions from "../../../hooks/useWIndowDimensions";
+
 const Container = styled.div`
   width: 100%;
-  padding-top: 60px;
+  height: 800px;
 `;
 
 const SearchWrap = styled.div`
   width: 100%;
-  max-width: 1280px;
-  padding: 20px;
   margin: auto;
   display: flex;
   border-radius: 16px;
+  flex-direction: ${props=>props.direction ? "column": "row"};
 `;
 
 const MapContainer = styled.div`
@@ -25,18 +26,31 @@ const MapContainer = styled.div`
 const ListingContainer = styled.div`
   flex: 1;
   position: relative;
-  overflow: hidden;
   background-color: #f5f7fa;
+  height: 800px;
+  overflow-y: hidden;
+  min-width: 200px;
 `;
 
-const Layer = styled.div`
-    width: 100%;
-    padding: 50px;
+const ScrollContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  padding-top: 200px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  min-height: 400px;
+
+`;
+
+
+const Temp = styled.div`
+    padding: 20px;
 `;
 
 const ListingHeader = styled.div`
     background-color: #fff;
-    padding: 20px;
+    padding: 50px 20px;
+    padding-bottom: 20px;
     box-sizing: border-box;
     border: 1px solid #00000010;
     z-index: 10;
@@ -56,11 +70,13 @@ const Search = () => {
     zoom: 11,
   };
 
+  const {width, height} = useWindowDimensions()
+
   return (
     <Container>
-      <SearchWrap>
+      <SearchWrap direction={width < 980}>
         <MapContainer>
-          <div style={{ height: "65vh", width: "100%" }}>
+          <div style={{ height: width < 980 ? "400px" : "800px", width: "100%" }}>
             <GoogleMapReact
             bootstrapURLKeys={{
                 key: "AIzaSyBZR2Mae8MxS4Q---MQl87gG1CGTVNZy5w",
@@ -84,15 +100,34 @@ const Search = () => {
                 color={config.navigation.colors.text} 
                 labelsize={"24px"}
                 padding={'0px'}
-                text={config.rental.text.search_engine_header}></TextLabel>
+                text={config.rental.text.search_engine_header}>
+                </TextLabel>
+                <TextLabel 
+                color={config.navigation.colors.subtext} 
+                labelsize={"16px"}
+                padding={'0px'}
+                weight={400}
+                text={"No Results Found"}>
+                </TextLabel>
             </ListingHeader>
-            <Layer></Layer>
-            {/* <MapItem></MapItem> */}
+            <ScrollContainer>
+              <TextLabel
+                color={config.navigation.colors.subtext}
+                text={"Search is currently under maintanance, please try again later."}
+                center
+              >
+              </TextLabel>
+            </ScrollContainer>
+            
+            {/* <Temp>
+
             <TextLabel
             center
              text={"We're Currently Building our Search Functions. Please follow our twitter for updates."}
              color={config.navigation.colors.subtext}
              ></TextLabel>
+            </Temp> */}
+
         </ListingContainer>
       </SearchWrap>
     </Container>

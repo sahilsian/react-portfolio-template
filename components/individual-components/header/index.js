@@ -6,6 +6,8 @@ import NavigationTab from "../navigation-tab";
 import config from '../../../config.json'
 import NavigationItem from "../navigation-item";
 import CustomButton from "../custom-button";
+import useWindowDimensions from "../../../hooks/useWIndowDimensions";
+import Icon from "../icon";
 
 const MainContainer = styled.div`
   box-sizing: border-box;
@@ -28,7 +30,7 @@ const OffsetContainer = styled.div`
 `;
 
 const FlexBody = styled.div`
-  display: flex;
+    display: ${props=>props.display ? "none": "flex"};
   flex: ${props=>props.flex};
   width: 100%;
   gap: ${props=>props.gap ? props.gap : "0px"};
@@ -40,7 +42,7 @@ const NavigationContainer = styled.nav`
   width: 100%;
   flex: 1;
   align-items: center;
-  display: flex;
+  display: ${props=>props.display ? "none": "flex"};
   gap: 10px;
 `;
 
@@ -51,10 +53,13 @@ const Wrapper = styled.div`
   z-index: 999;
 `;
 
+
+
 const Header = () => {
   const [background, setBackground] = useState(false);
   const [dropdown, setDropdown] = useState('')
   const [menuRender, setMenuRender] = useState([])
+  const {width, height} = useWindowDimensions();
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -69,7 +74,7 @@ const Header = () => {
           <FlexBody flex={2}>
             {/* <Logo image={config.navigation.logo}></Logo> */}
             <Logo image={config.navigation.logo}></Logo>
-            <NavigationContainer>
+            <NavigationContainer display={width < 980}>
               {config.navigation.tabs.map((e)=> {
                 return (
                     <NavigationTab
@@ -88,9 +93,11 @@ const Header = () => {
               })}
             </NavigationContainer>
           </FlexBody>
-          <FlexBody gap={"10px"} justify flex={1}>
-            <CustomButton outlined text={'Login'}></CustomButton>
-            <CustomButton text={'Signup'}></CustomButton>
+          <FlexBody display={width < 980}  gap={"10px"} justify flex={1}>
+            <CustomButton width={"150px"} outlined text={'Start your Rental'}></CustomButton>
+          </FlexBody>
+          <FlexBody flex={0.2} display={width > 980}>
+            <Icon size={"24px"} src={"/menu.svg"}></Icon>
           </FlexBody>
         </OffsetContainer>
       </MainContainer>

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import config from '../../../config.json'
 
 const ButtonContainer = styled.div`
-    padding: 15px 40px;
+    padding: 15px 20px;
     width: ${props=>props.width ? props.width : "100px"};
     background-color: ${props=>props.outlined ? "none" : config.navigation.colors.accent};
     border: ${props=>props.border ? "3px solid " + config.navigation.colors.accent : "none"};

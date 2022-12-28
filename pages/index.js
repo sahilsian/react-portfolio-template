@@ -2,6 +2,13 @@ import Hero from '../components/page-components/hero'
 import styled from 'styled-components'
 import Header from '../components/individual-components/header';
 import Rental from '../components/page-components/rental';
+import Info from '../components/page-components/info';
+import config from '../config.json'
+import BannerApp from '../components/page-components/banner-app';
+import TeamLayout from '../components/page-components/team-layout';
+import NavigationItem from '../components/individual-components/navigation-item';
+import FooterApp from '../components/page-components/footer-app';
+import SiteHead from '../components/individual-components/head';
 
 const Container = styled.div`
     width: 100%;
@@ -11,9 +18,29 @@ const Container = styled.div`
 function HomePage() {
     return(
       <Container>
+        <SiteHead></SiteHead>
         <Header></Header>
         <Hero></Hero>
         <Rental></Rental>
+        <Info
+          title={config.side_one.text.title}
+          description={config.side_one.text.description}
+          src={config.side_one.images.image1}
+        >
+        </Info>
+        <Info
+          maindirection
+          title={config.side_two.text.title}
+          description={config.side_two.text.description}
+          src={config.side_two.images.image1}
+          reverse
+          
+        >
+        </Info>
+        <BannerApp
+        ></BannerApp>
+        <TeamLayout></TeamLayout>
+       <FooterApp></FooterApp>
       </Container>
     ) 
   }
