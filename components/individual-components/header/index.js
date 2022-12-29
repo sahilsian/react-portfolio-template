@@ -56,10 +56,10 @@ const Wrapper = styled.div`
 
 
 const Header = () => {
+  const {width, height} = useWindowDimensions();
   const [background, setBackground] = useState(false);
   const [dropdown, setDropdown] = useState('')
   const [menuRender, setMenuRender] = useState([])
-  const {width, height} = useWindowDimensions();
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -74,7 +74,7 @@ const Header = () => {
           <FlexBody flex={2}>
             {/* <Logo image={config.navigation.logo}></Logo> */}
             <Logo image={config.navigation.logo}></Logo>
-            <NavigationContainer display={width < 980}>
+            <NavigationContainer display={false}>
               {config.navigation.tabs.map((e)=> {
                 return (
                     <NavigationTab
