@@ -5,6 +5,7 @@ import TextLabel from '../text-label';
 import config from '../../../config.json'
 import Icon from '../icon';
 import { useRouter } from 'next/router'
+import useWindowDimensions from '../../../hooks/useWIndowDimensions';
 
 const Container = styled.div`
     width: 100%;
@@ -18,13 +19,13 @@ const Image = styled.img`
     width: 100%;
     display: block;
     opacity: 0.13;
-    bottom: -100px;
+    bottom: 0px;
 `;
 
 const Wrapper = styled.div`
     width: 100%;
     max-width: 1280px;
-    min-height: 500px;
+    min-height: ${props=>props.height ? "1000px" : "500px"};
     position: relative;
     margin: auto;
 `;
@@ -34,12 +35,14 @@ const Items = styled.div`
     z-index: 10;
     top: 0;
     width: 100%;
-    display: flex;
+    display: ${props=>props.display ? "block" : "flex"};
     gap: 20px;
+    flex-wrap: wrap;
 `;
 
 const Flexitem = styled.div`
     flex: 1;
+    padding: 20px;
 `;
 
 const LogoContainer = styled.div`
@@ -48,11 +51,12 @@ const LogoContainer = styled.div`
 `;
 
 const Footer = ({backdrop, children, email, copywrite}) => {
+    const {width, height} = useWindowDimensions();
     const router = useRouter()
     return (
         <Container>
-            <Wrapper>
-                <Items>
+            <Wrapper height={width < 850}>
+                <Items display={width < 850}>
                     <Flexitem>
                         <Logo
                         paddingbottom={"20px"}

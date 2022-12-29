@@ -2,8 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
-    width: ${props=>props.size};
-    height: ${props=>props.size};   
+    width: 24px;
+    max-width: ${props=>props.size};
+    max-height: ${props=>props.size};   
     cursor: pointer;
 `;
 

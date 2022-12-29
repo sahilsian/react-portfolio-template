@@ -7,6 +7,7 @@ import AppLink from '../../individual-components/link';
 
 const ItemContainer = styled.div`
     flex: 1;
+    padding: 20px;
 `;
 
 const FooterApp = () => {

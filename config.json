@@ -82,7 +82,8 @@
         ]
     },
     "hero": {
-        "video": "/hero-video.mp4",
+        "video_1": "/hero-video.webm",
+        "video_2": "/hero-video.mp4",
         "cars" : [
             {
                 "name": "2022 Hyundai Kona",

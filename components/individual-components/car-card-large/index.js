@@ -4,7 +4,7 @@ import config from '../../../config.json'
 import useWindowDimensions from '../../../hooks/useWIndowDimensions';
 
 const Wrapper = styled.div`
-    width: 360px;
+    width: ${props=>props.width ? props.width : "360px"};
     height: ${props=>props.height ? props.height : "auto"};
     box-shadow:
     rgba(0, 0, 0, 0.24) 0px 0px 0px 1px,
@@ -15,7 +15,8 @@ const Wrapper = styled.div`
     border-radius: 16px;
     transform:
     perspective(800px)
-    rotateY(-8deg);
+    rotateY(-8deg)
+    ;
 
     &:hover {
         transform: perspective(800px) rotateY(-4deg);
@@ -117,7 +118,7 @@ const CarCardLarge = () => {
     const { width, height } = useWindowDimensions();
 
     return (
-        <Wrapper display={width < 1100} height={width < 1100 ? "300px" : false}>
+        <Wrapper display={width < 1110}>
         <Image width={width} src={width < 1650 ? '/map-no-banner.png' : '/map.png'}></Image>
         <Container>
             <Title>{config.hero.cars[selectedCar].name}</Title>

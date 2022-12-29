@@ -50,9 +50,18 @@ const VideoHero = () => {
       <Container>
         <Overlay></Overlay>
         <Video
-         src={config.hero.video} 
          ref={videoRef}
-         autoPlay loop controls={false}></Video>
+         autoPlay loop controls={false}>
+            <source
+            src={config.hero.video_1}
+            >
+            </source>
+            <source
+            src={config.hero.video_2}
+            >
+            </source>
+            Your browser does not support the <code>video</code> element.
+         </Video>
       </Container>
     </Wrapper>
   );

@@ -56,10 +56,10 @@ const Wrapper = styled.div`
 
 
 const Header = () => {
-  const {width, height} = useWindowDimensions();
   const [background, setBackground] = useState(false);
   const [dropdown, setDropdown] = useState('')
   const [menuRender, setMenuRender] = useState([])
+  const {width, height} = useWindowDimensions();
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -74,7 +74,7 @@ const Header = () => {
           <FlexBody flex={2}>
             {/* <Logo image={config.navigation.logo}></Logo> */}
             <Logo image={config.navigation.logo}></Logo>
-            <NavigationContainer display={false}>
+            <NavigationContainer display={width < 980}>
               {config.navigation.tabs.map((e)=> {
                 return (
                     <NavigationTab
@@ -97,7 +97,7 @@ const Header = () => {
             <CustomButton width={"150px"} outlined text={'Start your Rental'}></CustomButton>
           </FlexBody>
           <FlexBody flex={0.2} display={width > 980}>
-            <Icon size={"24px"} src={"/menu.svg"}></Icon>
+            <Icon  src={"/menu.svg"}></Icon>
           </FlexBody>
         </OffsetContainer>
       </MainContainer>

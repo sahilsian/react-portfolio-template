@@ -31,8 +31,8 @@ const FlexContainer = styled.div`
 const PrimaryText = styled.h1`
     margin: 0;
     color: #fff;
-    font-size: 64px;
-    line-height: 78px;
+    font-size: ${props=>props.size ? "38px": "64px"};
+    line-height: ${props=>props.size ? "48px": "78px"};
     padding-bottom: 12px;
     text-align: ${props=>props.center ? "center" : "left"};
 `;
@@ -40,7 +40,7 @@ const PrimaryText = styled.h1`
 const SecondaryText = styled.h2`
     margin: 0;
     color: #fff;
-    font-size: 22px;
+    font-size: ${props=>props.size ? "18px": "22px"};;
     font-weight: 400;
     padding-bottom: 33px;
     text-align: ${props=>props.center ? "center" : "left"};
@@ -48,15 +48,16 @@ const SecondaryText = styled.h2`
 
 const HighlightedWord = styled.span`
     color: ${config.navigation.colors.accent};
-    font-size: 64px;
-    line-height: 78px;
+    font-size: ${props=>props.size ? "38px": "64px"};
+    line-height: ${props=>props.size ? "48px": "78px"};
     position: relative;
 `;
 
 const Accent = styled.img`
     position: absolute;
     width: 30px;
-    top: 10px;
+    top: ${props=>props.size ? "-5px": "10px"};
+    right: ${props=>props.size ? "-20px": ""};
 `;
 
 const HeroContent = () => { 
@@ -64,15 +65,15 @@ const HeroContent = () => {
     return (
         <Container direction={width < 1100 ? true : false}>
             <FlexContainer center={width < 1100} justify={width < 1100 ? true : false} direction flexedit flex={2}>
-                <PrimaryText center={width < 1100 ? true : false}>
+                <PrimaryText size={width < 1100} center={width < 1100 ? true : false}>
                     {config.hero.text.primary.replace(config.hero.text.highlighted_word_primary, "")}
-                    <HighlightedWord>
+                    <HighlightedWord size={width < 1100}>
                         {config.hero.text.highlighted_word_primary}
-                        <Accent src='/heart.svg'></Accent>
+                        <Accent size={width < 1110} src='/heart.svg'></Accent>
                     </HighlightedWord>
                 </PrimaryText>
 
-                <SecondaryText center={width < 1100}>
+                <SecondaryText size={width < 1100} center={width < 1100}>
                     {config.hero.text.secondary}
                 </SecondaryText>
                 <CustomButton width={"200px"} text={config.hero.text.cta_button}>
