@@ -37,7 +37,7 @@ const SideSide = ({title, description, reverse, src, flexleft, flexright, flexra
                 <FlexBody justifyhard={justifyhard} flexdirection={flexdirectionleft} flexratio={flexratioleft} justify={flexleft}>
                     <TextLabel
                         color={config.navigation.colors.text}
-                        labelsize={"46px"}
+                        labelsize={width < 980 ? "38px" : "46px"}
                         text={title}
                         weight={600}
                         center={width < 980}
@@ -45,7 +45,7 @@ const SideSide = ({title, description, reverse, src, flexleft, flexright, flexra
                     </TextLabel>
                     <TextLabel
                         color={config.navigation.colors.subtext}
-                        labelsize={"22px"}
+                        labelsize={width < 980 ? "18px" : "22px"}
                         weight={400}
                         text={description}
                         center={width < 980}

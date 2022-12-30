@@ -6,6 +6,7 @@ import PillCard from '../../individual-components/pill-card';
 import { useRouter } from 'next/router'
 import TextLabel from '../../individual-components/text-label';
 import CustomButton from '../../individual-components/custom-button';
+import useWindowDimensions from '../../../hooks/useWIndowDimensions';
 
 const Container = styled.div`
     width: 100%;
@@ -33,13 +34,14 @@ const Contain = styled.div`
 
 const TeamLayout = () => {
     const router = useRouter()
+    const {width, height} = useWindowDimensions()
     return (
         <Container>
             <TextLabel
             text={"Meet the Team"}
             color={config.navigation.colors.text}
             padding={"100px"}
-            labelsize={"48px"}
+            labelsize={width < 980 ? "38px" : "48px"}
             weight={"700"}
             center
             >

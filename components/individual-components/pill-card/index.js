@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import config from '../../../config.json'
+import useWindowDimensions from '../../../hooks/useWIndowDimensions';
 import TextLabel from '../text-label';
 
 const Card = styled.div`
@@ -41,6 +42,7 @@ const IconContainer = styled.div`
 
 
 const PillCard = ({name, description, img, onClick, children}) => {
+    const {width, height} = useWindowDimensions()
     return (
         <Card>
             <ProfileImage src={img}>
@@ -49,7 +51,7 @@ const PillCard = ({name, description, img, onClick, children}) => {
             text={name}
             color={config.navigation.colors.text}
             center
-            labelsize={"28px"}
+            labelsize={width < 980 ? "22px" : "28px"}
             padding={"2px"}
             >
             </TextLabel>
@@ -57,7 +59,7 @@ const PillCard = ({name, description, img, onClick, children}) => {
             text={description}
             color={config.navigation.colors.subtext}
             center
-            labelsize={"18px"}
+            labelsize={width < 980 ? "16px" : "18px"}
             >
             </TextLabel>
             <IconContainer>

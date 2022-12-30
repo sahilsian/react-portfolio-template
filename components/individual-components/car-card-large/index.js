@@ -17,13 +17,11 @@ const Wrapper = styled.div`
     perspective(800px)
     rotateY(-8deg)
     ;
-
     &:hover {
         transform: perspective(800px) rotateY(-4deg);
       }
-
     display: ${props=>props.display ? "none": "block"};
-
+    margin-top: ${props=>props.mobile ? "50px" : "0px"};
 `;
 
 const Container = styled.div`
@@ -36,7 +34,7 @@ const Container = styled.div`
 
 const Title = styled.p`
     color: #fff;
-    font-size: 20px;
+    font-size: ${props=>props.size ? "18px" : "20px"};
     margin: 0;
     padding: 0;
     padding-bottom: 15px;
@@ -46,20 +44,20 @@ const Title = styled.p`
 
 const CarImage = styled.img`
     width: 100%;
-    max-width: 200px;
+    max-width: ${props=>props.maxwidth ? "150px" : "200px"};
     display: block;
     margin: 0px auto;
 `;
 
 const ContainerNested = styled.div`
-    border-bottom: 1px solid hsla(0,0%,100%,.1);
+    border-bottom: ${props=>props.mobile ? "none" : "1px solid hsla(0,0%,100%,.1)"} ;
 `;
 
 const CTA = styled.div`
     width: 100%;
     padding: 20px 0px;
     padding-bottom: 0px;
-    display: flex;
+    display: ${props=>props.mobile ? "none" : "flex"};
     justify-content: center;
     align-items: center;
     
@@ -79,7 +77,7 @@ const CTALink = styled.a`
 `;
 
 const DotContainer = styled.div`
-    display: flex;
+    display: ${props=>props.mobile ? "none" : "flex"};
     gap: 10px;
     justify-content: center;
     padding-bottom: 20px;
@@ -95,6 +93,7 @@ const Dot = styled.div`
 
 const Image = styled.img`
     width: ${props=> props.width < 1650 ? "360px" : "530px"};
+    width: ${props=>props.mobile};
     display: block;
 `;
 
@@ -118,13 +117,13 @@ const CarCardLarge = () => {
     const { width, height } = useWindowDimensions();
 
     return (
-        <Wrapper display={width < 1110}>
-        <Image width={width} src={width < 1650 ? '/map-no-banner.png' : '/map.png'}></Image>
+        <Wrapper mobile={width < 1100} width={width < 1100 ? "250px" : null}>
+        <Image mobile={width < 1100 ? "250px" : "null"} width={width} src={width < 1650 ? '/map-no-banner.png' : '/map.png'}></Image>
         <Container>
-            <Title>{config.hero.cars[selectedCar].name}</Title>
-            <ContainerNested>
-                <CarImage src={`${config.hero.cars[selectedCar].img}`}></CarImage>
-                <DotContainer>
+            <Title size={width < 1100}>{config.hero.cars[selectedCar].name}</Title>
+            <ContainerNested mobile={width < 1100}>
+                <CarImage maxwidth={width < 1100} src={`${config.hero.cars[selectedCar].img}`}></CarImage>
+                <DotContainer mobile={width < 1100}>
                     {config.hero.cars.map((e)=> {
                         return (
                             <Dot onClick={()=> {
@@ -137,7 +136,7 @@ const CarCardLarge = () => {
                     
                 </DotContainer>
             </ContainerNested>
-            <CTA>
+            <CTA mobile={width < 1100}>
                 <CTALink>Start Renting</CTALink>
             </CTA>
         </Container>

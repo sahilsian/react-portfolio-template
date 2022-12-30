@@ -8,7 +8,7 @@ const Container = styled.div`
     width: 100%;
 `;
 
-const InputComponent = ({placeholder, onChange,text,labelsize,color}) => {
+const InputComponent = ({placeholder, onChange,text,labelsize,color,size}) => {
     return (
         <Container>
             <TextLabel 
@@ -20,6 +20,7 @@ const InputComponent = ({placeholder, onChange,text,labelsize,color}) => {
             <Input 
             placeholder={placeholder}
             onChange={onChange}
+            size={size}
             ></Input>
         </Container>
     )

@@ -71,10 +71,10 @@ const Header = () => {
     <Wrapper>
       <MainContainer bgcolor={background} boxShadow={background}>
         <OffsetContainer>
-          <FlexBody flex={2}>
+          <FlexBody flex={width < 1110 ? 3 : 2}>
             {/* <Logo image={config.navigation.logo}></Logo> */}
             <Logo image={config.navigation.logo}></Logo>
-            <NavigationContainer display={width < 980}>
+            <NavigationContainer display={width < 1100}>
               {config.navigation.tabs.map((e)=> {
                 return (
                     <NavigationTab
@@ -93,11 +93,11 @@ const Header = () => {
               })}
             </NavigationContainer>
           </FlexBody>
-          <FlexBody display={width < 980}  gap={"10px"} justify flex={1}>
-            <CustomButton width={"150px"} outlined text={'Start your Rental'}></CustomButton>
+          <FlexBody display={width < 1100}  gap={"10px"} justify flex={1}>
+            <CustomButton width={"200px"} outlined text={'Start your Rental'}></CustomButton>
           </FlexBody>
-          <FlexBody flex={0.2} display={width > 980}>
-            <Icon  src={"/menu.svg"}></Icon>
+          <FlexBody flex={0.2} display={width > 1100}>
+            <Icon size={"24px"} src={"/menu.svg"}></Icon>
           </FlexBody>
         </OffsetContainer>
       </MainContainer>

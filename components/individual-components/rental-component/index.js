@@ -7,11 +7,11 @@ import useWindowDimensions from '../../../hooks/useWIndowDimensions';
 
 const Container = styled.div`
     width: 100%;
-    position: absolute;
+    position: ${props=>props.mobile ? "static" : "absolute"};
     z-index: 12;
-    top: -130px;
+    top: ${props=>props.mobile ? "0" : "-130px"};
     display: block;
-    padding: 0px 20px;
+    padding: ${props=>props.mobile ? "0px" : "0px 20px"} ;
     box-sizing: border-box;
 `;
 
@@ -21,12 +21,12 @@ const Comp = styled.div`
     padding: 30px;
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: ${props=>props.bgcolor ? "rgba(255, 255, 255, 0.75)" : "rgba(17, 25, 40, 0.75)"};
+    background-color: ${props=>props.mobile ? "rgba(17, 25, 40, 1)" : "rgba(17, 25, 40, 0.75)"};
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     margin: auto;
     min-height: 100px;
-    border-radius: 20px;
-    display: flex;
+    border-radius: ${props=>props.mobile ? "0px" : "20px"};
+    display: ${props=>props.display ? "block" : "flex"};
     align-items: flex-end;
     gap: 20px;
     box-sizing: border-box;
@@ -34,22 +34,22 @@ const Comp = styled.div`
 
 
 
-const RentalComponent = ({bgcolor}) => {
+const RentalComponent = ({}) => {
     const {width, height} = useWindowDimensions()
     return (
-        <Container>
-            <Comp>
+        <Container mobile={width < 1100}>
+            <Comp  mobile={width < 1100} display={width < 675}>
                 <InputComponent 
                 text={config.rental.text.location_search}
-                labelsize={"20px"}
-                bgcolor={bgcolor}
+                labelsize={width < 675 ? "18px" : "20px"}
                 placeholder={config.rental.text.input_placeholder}
+                size={width < 675}
                 >
                 </InputComponent>
-                <CustomButton 
+                <CustomButton
+                    marginTop={width < 675}
                     text={config.rental.text.button_search}
-                    height={"35px"}
-                    width={"240px"}
+                    width={width < 675 ? "100%" : "240px"}
                 ></CustomButton>
             </Comp>
         </Container>

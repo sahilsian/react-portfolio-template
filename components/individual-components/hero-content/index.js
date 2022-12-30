@@ -16,6 +16,7 @@ const Container = styled.div`
     gap: 20px;
     box-sizing: border-box;
     flex-direction: ${props=>props.direction ? "column-reverse": "row"};
+    padding-top: 50px;
 `;
 
 const FlexContainer = styled.div`
@@ -60,7 +61,8 @@ const Accent = styled.img`
     right: ${props=>props.size ? "-20px": ""};
 `;
 
-const HeroContent = () => { 
+
+const HeroContent = () => {
     const {width, height} = useWindowDimensions();
     return (
         <Container direction={width < 1100 ? true : false}>
@@ -76,8 +78,7 @@ const HeroContent = () => {
                 <SecondaryText size={width < 1100} center={width < 1100}>
                     {config.hero.text.secondary}
                 </SecondaryText>
-                <CustomButton width={"200px"} text={config.hero.text.cta_button}>
-
+                <CustomButton  hide={width < 1100} outlined height={width < 1100 ? null : "60px"} width={"200px"} text={config.hero.text.cta_button}>
                 </CustomButton>
             </FlexContainer>
                 

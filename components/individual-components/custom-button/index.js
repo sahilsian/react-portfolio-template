@@ -4,21 +4,23 @@ import styled from 'styled-components'
 import config from '../../../config.json'
 
 const ButtonContainer = styled.div`
-    padding: 15px 20px;
+    padding: 20px 20px;
     width: ${props=>props.width ? props.width : "100px"};
     background-color: ${props=>props.outlined ? "none" : config.navigation.colors.accent};
     border: ${props=>props.border ? "3px solid " + config.navigation.colors.accent : "none"};
-    display: inline-flex;
-    height ${props=>props.height ? props.height : "auto"};
+    display: ${props=>props.hide ? "none" : "inline-flex"};
+    height ${props=>props.height ? props.height : "100%"};
     justify-content: center;
     align-items: center;
     border-radius: 20px;
     cursor: pointer;
     transition: 0.2s all ease;
+    margin-top: ${props=>props.marginTop ? "10px" : "0px"};
     ${ props => props.hover ? `
         &:hover {
             transition: 0.2s all ease;
             border-color: ${config.navigation.colors.accent}80;
+            cursor: pointer;
         }
     `
     :
@@ -26,10 +28,12 @@ const ButtonContainer = styled.div`
         &:hover {
             transition: 0.2s all ease;
             background-color: ${config.navigation.colors.accent}80;
+            cursor: pointer;
         }
     `
         
     }
+    box-sizing: border-box;
     
 `;
 
@@ -41,9 +45,9 @@ const Text = styled.span`
     padding: 0;
 `;
 
-const CustomButton = ({text, outlined, width, height}) => {
+const CustomButton = ({text, outlined, width, height, marginTop, hide}) => {
     return (
-        <ButtonContainer height={height} width={width} border={outlined} hover={outlined} outlined={outlined}>
+        <ButtonContainer hide={hide} marginTop={marginTop} height={height} width={width} border={outlined} hover={outlined} outlined={outlined}>
             <Text color={outlined}>
                 {text}
             </Text>
@@ -53,7 +57,7 @@ const CustomButton = ({text, outlined, width, height}) => {
 
 CustomButton.defaultProps = {
     text: "Button",
-    width: "50px"
+    width: "50px",
 }
 
 export default CustomButton

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import config from '../../../config.json'
 import { Search } from 'react-ionicons'
+import useWindowDimensions from '../../../hooks/useWIndowDimensions'
 
 const Container = styled.div`
     width: 100%;
@@ -26,13 +27,14 @@ const InputPiece = styled.input`
     border: none;
     color: ${config.navigation.colors.text};
     box-sizing: border-box;
-    font-size: 18px;
+    font-size: ${props=>props.size ? "16px" : "18px"};
     background-color: transparent;
     outline: none;  
     
 `;
 
-const Input = ({placeholder, value, onChange}) => {
+const Input = ({placeholder, value, onChange, size}) => {
+    const {width, height} = useWindowDimensions()
     const [focus, setFocus] = useState(false)
     return (
         <Container>
@@ -49,6 +51,7 @@ const Input = ({placeholder, value, onChange}) => {
             <InputPiece 
             onFocus={()=>{setFocus(true)}}
             onBlur={()=>{setFocus(false)}}
+            size={size}
             onChange={onChange} 
             value={value} 
             placeholder={placeholder}
