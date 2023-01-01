@@ -14,7 +14,6 @@ const Label = styled.p`
     padding-bottom: ${props=>props.padding ? props.padding : "7px"};
     text-align: ${props=>props.center ? "center" : "left"};
     transition: 0.2s all ease;
-
     &:hover {
         color: ${props=>props.hover ? props.hover : props.color};
         transition: 0.2s all ease;

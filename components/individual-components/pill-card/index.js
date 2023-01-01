@@ -33,7 +33,6 @@ const ProfileImage = styled.img`
 `;
 
 const IconContainer = styled.div`
-    width: 100%;
     justify-content: center;
     display: flex;
     gap: 10px;

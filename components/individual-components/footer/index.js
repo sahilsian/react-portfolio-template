@@ -11,7 +11,6 @@ const Container = styled.div`
     width: 100%;
     padding-top: 50px;
     position: relative;
-    overflow: hidden;
 `;
 
 const Image = styled.img`
@@ -19,7 +18,8 @@ const Image = styled.img`
     width: 100%;
     display: block;
     opacity: 0.13;
-    bottom: 0px;
+    bottom: -100px;
+    min-height: 100%;
 `;
 
 const Wrapper = styled.div`

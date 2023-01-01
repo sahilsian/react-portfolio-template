@@ -10,7 +10,7 @@ const Container = styled.div`
     position: ${props=>props.mobile ? "static" : "absolute"};
     z-index: 12;
     top: ${props=>props.mobile ? "0" : "-130px"};
-    display: block;
+    display: ${props=>props.hide ? "none" : "block"};
     padding: ${props=>props.mobile ? "0px" : "0px 20px"} ;
     box-sizing: border-box;
 `;
@@ -37,8 +37,8 @@ const Comp = styled.div`
 const RentalComponent = ({}) => {
     const {width, height} = useWindowDimensions()
     return (
-        <Container mobile={width < 1100}>
-            <Comp  mobile={width < 1100} display={width < 675}>
+        <Container hide={config.rental.disable} mobile={width < 1100}>
+            <Comp mobile={width < 1100} display={width < 675}>
                 <InputComponent 
                 text={config.rental.text.location_search}
                 labelsize={width < 675 ? "18px" : "20px"}

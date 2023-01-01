@@ -6,7 +6,7 @@ export default function MyApp({ Component, pageProps }) {
     useEffect(() => {
         setTimeout(()=> {
             setMounted(true);
-        }, 3000)
+        }, 1000)
     }, [])
 
     if (!mounted) {

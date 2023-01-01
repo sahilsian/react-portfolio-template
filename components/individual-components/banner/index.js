@@ -73,11 +73,11 @@ const Banner = ({image, title, description}) => {
 
                     <Badge 
                     src='/app-store.svg'
-                    width={"100px"}
+                    width={"150px"}
                     ></Badge>
                     <Badge 
                     src='/play-store.png'
-                    width={"112px"}
+                    width={"132px"}
                     ></Badge>
                     </BadgeContainer>
 

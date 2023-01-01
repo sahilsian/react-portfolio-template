@@ -106,6 +106,7 @@
         }
     },
     "rental": {
+        "disable": true,
         "text": {
             "location_search": "Find a Hotel",
             "input_placeholder": "Search a Location or Hotel.",
@@ -300,5 +301,25 @@
     },
     "head": {
         "title": "Greenclick Technologies"
+    },
+    "photos": {
+        "title": "Gallery",
+        "photos": [
+            { "src": "/gallery/veemo-outside.webp", "width": 1200, "height": 1200, "key": "1"},
+            { "src": "/gallery/veemo-protective.webp", "width": 1200, "height": 1200, "key": "2"},
+            { "src": "/gallery/tesla.jpg", "width": 5650, "height": 3766 ,"key": "3"},
+            { "src": "/gallery/veemo-protective.webp", "width": 1200, "height": 1200, "key": "4"},
+            { "src": "/gallery/tesla.jpg", "width": 5650, "height": 3766, "key": "5"},
+            { "src": "/gallery/veemo-protective.webp", "width": 1200, "height": 1200, "key": "6"},
+            { "src": "/gallery/veemo-outside.webp", "width": 1200, "height": 1200, "key": "7"},
+            { "src": "/gallery/veemo-protective.webp", "width": 1200, "height": 1200, "key": "8"},
+            { "src": "/gallery/tesla.jpg", "width": 5650, "height": 3766, "key": "9"},
+            { "src": "/gallery/veemo-protective.webp", "width": 1200, "height": 1200, "key": "10"},
+            { "src": "/gallery/tesla.jpg", "width": 5650, "height": 3766, "key": "11"},
+            { "src": "/gallery/veemo-protective.webp", "width": 1200, "height": 1200, "key": "12"}
+        ]
+    },
+    "blog": {
+        "title": "Greenclick Blog"
     }
 }

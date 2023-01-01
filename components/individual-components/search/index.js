@@ -9,6 +9,7 @@ import useWindowDimensions from "../../../hooks/useWIndowDimensions";
 const Container = styled.div`
   width: 100%;
   height: 800px;
+  display: ${props=>props.hide ? "none" : "block"};
 `;
 
 const SearchWrap = styled.div`
@@ -73,7 +74,7 @@ const Search = () => {
   const {width, height} = useWindowDimensions()
 
   return (
-    <Container>
+    <Container hide={config.rental.disable}>
       <SearchWrap direction={width < 980}>
         <MapContainer>
           <div style={{ height: width < 980 ? "400px" : "800px", width: "100%" }}>

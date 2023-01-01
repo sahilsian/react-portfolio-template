@@ -1,4 +1,5 @@
 import { width } from '@mui/system';
+import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components'
 import config from '../../../config.json'
@@ -43,21 +44,26 @@ const Text = styled.span`
     color: ${props=>props.color ? config.navigation.colors.accent : "#fff"};
     margin: 0;
     padding: 0;
+    text-decoration: none;
 `;
 
-const CustomButton = ({text, outlined, width, height, marginTop, hide}) => {
+const CustomButton = ({text, outlined, width, height, marginTop, hide, href}) => {
     return (
-        <ButtonContainer hide={hide} marginTop={marginTop} height={height} width={width} border={outlined} hover={outlined} outlined={outlined}>
-            <Text color={outlined}>
-                {text}
-            </Text>
-        </ButtonContainer>
+        <Link style={{textDecoration: 'none'}} href={href}>
+            <ButtonContainer hide={hide} marginTop={marginTop} height={height} width={width} border={outlined} hover={outlined} outlined={outlined}>
+                <Text color={outlined}>
+                    {text}
+                </Text>
+            </ButtonContainer>
+        </Link>
+
     )
 }
 
 CustomButton.defaultProps = {
     text: "Button",
     width: "50px",
+    href: "/"
 }
 
 export default CustomButton

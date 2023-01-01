@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import react from 'react';
 import styled from 'styled-components';
 
@@ -20,7 +21,9 @@ const LogoImage = styled.img`
 const Logo = ({image, paddingbottom}) => {
     return (
         <LogoContainer paddingbottom={paddingbottom}>
-            <LogoImage src={image}></LogoImage>
+            <Link style={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}} href={'/'}>
+                <LogoImage src={image}></LogoImage>
+            </Link>
         </LogoContainer>
     )
 }

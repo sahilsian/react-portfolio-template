@@ -9,6 +9,7 @@ import TeamLayout from '../components/page-components/team-layout';
 import NavigationItem from '../components/individual-components/navigation-item';
 import FooterApp from '../components/page-components/footer-app';
 import SiteHead from '../components/individual-components/head';
+import PhotoGallery from '../components/page-components/photo-gallery';
 
 const Container = styled.div`
     width: 100%;
@@ -16,6 +17,7 @@ const Container = styled.div`
 `;
 
 function HomePage() {
+  
     return(
       <Container>
         <SiteHead></SiteHead>
@@ -40,6 +42,7 @@ function HomePage() {
         <BannerApp
         ></BannerApp>
         <TeamLayout></TeamLayout>
+        <PhotoGallery></PhotoGallery>
        <FooterApp></FooterApp>
       </Container>
     ) 
