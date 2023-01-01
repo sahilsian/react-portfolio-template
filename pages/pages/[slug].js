@@ -112,6 +112,7 @@ const PostPage = ({posts, frontmatter: {title, date, cover_image, read, excerpt}
         <Container>
             <Head>
                 <title>{title} | Greenclick Technologies</title>
+                <link rel="shortcut icon" href="/greenclick-green.png" />
                 <meta name="description" content={excerpt}></meta>
                 <meta name="robots" content="index, follow" />
                 <meta content={title} property="og:title" />

@@ -7,6 +7,7 @@ const SiteHead = ({title, description, banner}) => {
     return (
         <Head>
             <title>{title}</title>
+            <link rel="shortcut icon" href="/greenclick-green.png" />
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             <meta content={title} property="og:title" />
             <meta content={description} property="og:description" />
