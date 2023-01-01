@@ -46,12 +46,12 @@ const BadgeContainer = styled.div`
     justify-content: ${props=>props.justify ? "center" : "flex-start"};
 `;
 
-const Banner = ({image, title, description}) => {
+const Banner = ({image, title, description, alt}) => {
     const {width, height} = useWindowDimensions();
     return (
         <BannerContainer>
             <Margin direction={width < 980}>
-                <Image src={image}>
+                <Image src={image} alt={alt}>
 
                 </Image>
                 <FlexContainer>

@@ -15,10 +15,10 @@ const IconRaw = styled.img`
     max-height: ${props=>props.size || "20px"}; 
 `;
 
-const Icon = ({src, size, onClick, display}) => {
+const Icon = ({src, size, onClick, display, alt}) => {
     return (
         <Container display={display} onClick={onClick}>
-            <IconRaw src={src} size={size}></IconRaw>
+            <IconRaw alt={alt} src={src} size={size}></IconRaw>
         </Container>
     )
 }

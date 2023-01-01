@@ -22,7 +22,7 @@ const Logo = ({image, paddingbottom}) => {
     return (
         <LogoContainer paddingbottom={paddingbottom}>
             <Link style={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}} href={'/'}>
-                <LogoImage src={image}></LogoImage>
+                <LogoImage alt={"Logo"} src={image}></LogoImage>
             </Link>
         </LogoContainer>
     )

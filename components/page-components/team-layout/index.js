@@ -10,7 +10,8 @@ import useWindowDimensions from '../../../hooks/useWIndowDimensions';
 
 const Container = styled.div`
     width: 100%;
-    padding: 50px 0px;
+    padding: 50px 20px;
+    box-sizing: border-box;
 `;
 
 const Margin = styled.div`
@@ -30,6 +31,7 @@ const Contain = styled.div`
     display: flex;
     justify-content: center;
     padding: 50px 0px;
+    box-sizing: border-box;
 `;
 
 const TeamLayout = () => {
@@ -40,7 +42,7 @@ const TeamLayout = () => {
             <TextLabel
             text={"Meet the Team"}
             color={config.navigation.colors.text}
-            padding={"100px"}
+            padding={"50px"}
             labelsize={width < 980 ? "38px" : "54px"}
             weight={"700"}
             center
@@ -53,11 +55,14 @@ const TeamLayout = () => {
                         name={e.name}
                         description={e.description}
                         img={e.img}
+                        banner={e.banner}
+                        altImage={e.altUser}
+                        altBanner={e.alt}
                         >
                         {
                         e.icons.map((e)=> {
                             return (
-                                <Icon src={e.img} onClick={()=> {
+                                <Icon alt={e.alt} src={e.img} onClick={()=> {
                                     router.push(e.url)
                                 }}></Icon>
                             )

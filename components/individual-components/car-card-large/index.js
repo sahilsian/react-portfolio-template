@@ -97,32 +97,17 @@ const Image = styled.img`
     display: block;
 `;
 
-const images = [
-    {
-        name: '2022 Hyundai Kona',
-        img: "/hyundai-kona.png"
-    },
-    {
-        name: '2022 Veemo E-Bike',
-        img: "/hundai-kona.png"
-    },
-    {
-        name: '2022 Toyota Prius',
-        img: "/hundai-kona.png"
-    }
-]
-
 const CarCardLarge = () => {
     const [selectedCar, setSelectedCar] = useState(0)
     const { width, height } = useWindowDimensions();
 
     return (
         <Wrapper mobile={width < 1100} width={width < 1100 ? "250px" : null}>
-        <Image mobile={width < 1100 ? "250px" : "null"} width={width} src={width < 1650 ? '/map-no-banner.png' : '/map.png'}></Image>
+        <Image alt='Map with Greenclick Icon for Hotel Location' mobile={width < 1100 ? "250px" : "null"} width={width} src={width < 1650 ? '/map-no-banner.png' : '/map.png'}></Image>
         <Container>
             <Title size={width < 1100}>{config.hero.cars[selectedCar].name}</Title>
             <ContainerNested mobile={width < 1100}>
-                <CarImage maxwidth={width < 1100} src={`${config.hero.cars[selectedCar].img}`}></CarImage>
+                <CarImage alt={config.hero.cars[selectedCar].alt} maxwidth={width < 1100} src={`${config.hero.cars[selectedCar].img}`}></CarImage>
                 <DotContainer mobile={width < 1100}>
                     {config.hero.cars.map((e)=> {
                         return (

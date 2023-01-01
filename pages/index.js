@@ -28,6 +28,7 @@ function HomePage() {
           title={config.side_one.text.title}
           description={config.side_one.text.description}
           src={config.side_one.images.image1}
+          alt={config.side_one.images.alt}
         >
         </Info>
         <Info
@@ -36,6 +37,7 @@ function HomePage() {
           description={config.side_two.text.description}
           src={config.side_two.images.image1}
           reverse
+          alt={config.side_two.images.alt}
           
         >
         </Info>

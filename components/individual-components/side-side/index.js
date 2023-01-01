@@ -29,7 +29,7 @@ const FlexBody = styled.div`
     justify-content: ${props=>props.justifyhard};
 `;
 
-const SideSide = ({title, description, reverse, src, flexleft, flexright, flexratioleft, flexratioright, flexdirectionleft, flexdirectionright, maindirection, justifyhard, descriptiontitle, descriptiondescription}) => {
+const SideSide = ({title, description, reverse, src, flexleft, flexright, flexratioleft, flexratioright, flexdirectionleft, flexdirectionright, alt, maindirection, justifyhard, descriptiontitle, descriptiondescription}) => {
     const {width, height} = useWindowDimensions();
     return (
         <Container>
@@ -53,7 +53,7 @@ const SideSide = ({title, description, reverse, src, flexleft, flexright, flexra
                     </TextLabel>
                 </FlexBody>
                 <FlexBody justifyhard={justifyhard} flexdirection={flexdirectionright} flexratio={flexratioright} justify={flexright}>
-                    <SingleImageCard descriptiontitle={descriptiontitle} descriptiondescription={descriptiondescription} reverse={reverse} src={src}></SingleImageCard>
+                    <SingleImageCard alt={alt} descriptiontitle={descriptiontitle} descriptiondescription={descriptiondescription} reverse={reverse} src={src}></SingleImageCard>
                 </FlexBody>
             </Wrapper>
         </Container>

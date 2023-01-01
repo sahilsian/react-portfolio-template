@@ -87,15 +87,18 @@
         "cars" : [
             {
                 "name": "2022 Hyundai Kona",
-                "img": "/hyundai-kona.png"
+                "img": "/hyundai-kona.png",
+                "alt": "Hyundai Kona"
             },
             {
                 "name": "2022 Veemo E-Bike",
-                "img": "/hyundai-kona.png"
+                "img": "/veemo.png",
+                "alt": "Veemo E-Bike Vehicle"
             },
             {
                 "name": "2022 Toyota Prius",
-                "img": "/hyundai-kona.png"
+                "img": "/hyundai-kona.png",
+                "alt": "Toyota Prius"
             }
         ],
         "text": {
@@ -122,7 +125,8 @@
             "description_description": "The Greenclick Valet Kiosk stores your rental keys and is located inside the hotel lobby. You can access and return keys into the box by using our Greenclick App."
         },
         "images": {
-            "image1": "/gcbox.png"
+            "image1": "/gcbox.png",
+            "alt": " Realistic Greenclick Box"
         }
     },
     "side_two": {
@@ -133,7 +137,8 @@
             "description_description": "Coming Soon."
         },
         "images": {
-            "image1": "/veemo.png"
+            "image1": "/veemo.png",
+            "alt": "Veemo E-Bike Vehicle"
         }
     },
     "banner_app": {
@@ -142,64 +147,84 @@
             "description": "Our app will be available on the AppStore & PlayStore where you will be able to purchase your vehicle to rent."
         },
         "images": {
-            "image1": "/phone.png"
+            "image1": "/phone.png",
+            "alt": "Iphone Mockup of Greenclick App"
         }
     },
     "team": {
         "team": [
             {
                 "name": "Brian Cordero",
-                "description": "Founder & CEO",
+                "description": "Founder, CEO at Greenclick Technologies",
                 "img": "/brian.png",
+                "banner": "/brian-car.png",
+                "alt": "Image of Car Vintage Porche Carerra",
+                "altUser": "Brian Cordero Profile Image Headshot",
                 "icons": [
                     {
                         "img": "/linkedin.svg",
-                        "url": "https://www.linkedin.com/in/brian-cordero-5a7a8416b/"
+                        "url": "https://www.linkedin.com/in/brian-cordero-5a7a8416b/",
+                        "alt": "Linkedin Icon"
                     }
                 ]
             },
             {
                 "name": "Sahil Sian",
-                "description": "Technical Co-Founder & CTO",
+                "description": "Senior Frontend Developer & Designer - Co-Founder & CTO at Greenclick Technologies",
                 "img": "/sahil.jpg",
+                "banner": "/sahil-car.jpg",
+                "alt": "Image of Car Nissan 370z",
+                "altUser": "Sahil Sian Profile Image Headshot",
                 "icons": [
                     {
                         "img": "/linkedin.svg",
-                        "url": "https://www.linkedin.com/in/sahil-sian-5305b7198/"
+                        "url": "https://www.linkedin.com/in/sahil-sian-5305b7198/",
+                        "alt": "Linkedin Icon"
                     },
                     {
                         "img": "/code.svg",
-                        "url": "https://cssahil.com"
+                        "url": "https://cssahil.com",
+                        "alt": "HTML Icon"
                     },
                     {
                         "img": "/github.svg",
-                        "url": "https://github.com/sahilsian"
+                        "url": "https://github.com/sahilsian",
+                        "alt": "Github Icon"
                     }
                 ]
             },
             {
                 "name": "Max Zhang",
-                "description": "CFO",
+                "description": "Incoming Investment Banking Summer Analyst @ Keybanc Capital Markets - CFO at Greenclick Technologies",
                 "img": "/max.jpg",
+                "banner": "/max-car.jpg",
+                "alt": "Roles Royce Wraith Vehicle",
+                "altUser": "Max Zhang Profile Image Headshot",
                 "icons": [
                     {
                         "img": "/linkedin.svg",
-                        "url": "https://www.linkedin.com/in/zhang-max/"
+                        "url": "https://www.linkedin.com/in/zhang-max/",
+                        "alt": "Linkedin Icon"
                     }
                 ]
             },
             {
                 "name": "Shadat Rahman",
-                "description": "Senior Software Engineer",
+                "description": "Senior Software Engineer at Greenclick Technologies",
                 "img": "/default.jpg",
+                "banner": "/shadat_car.jpg",
+                "alt": "Image of Car Nissan GTR",
+                "altUser": "Shadat Rahman Profile Image Headshot",
                 "icons": [
                     {
                         "img": "/linkedin.svg",
-                        "url": "https://www.linkedin.com/in/shadat-rahman/"
+                        "url": "https://www.linkedin.com/in/shadat-rahman/",
+                        "alt": "Linkedin Icon"
                     },
                     {
                         "img": "/github.svg",
-                        "url": "https://github.com/sahilsian"
+                        "url": "https://github.com/sahilsian",
+                        "alt": "Github Icon"
                     }
                 ]
             }
@@ -210,20 +235,24 @@
     },
     "footer": {
         "images": {
-            "backdrop": "/cityscape.svg"
+            "backdrop": "/cityscape.svg",
+            "alt": "Illustration of Hotel and Greenclick Box"
         },
         "social": [
             {
                 "img": "/linkedin.svg",
-                "url": "https://www.linkedin.com/company/greenclick-technologies/"
+                "url": "https://www.linkedin.com/company/greenclick-technologies/",
+                "alt": "Linkedin Icon"
             },
             {
                 "img": "/twitter.svg",
-                "url": "https://twitter.com/greenclicktech"
+                "url": "https://twitter.com/greenclicktech",
+                "alt": "Twitter Icon"
             },
             {
                 "img": "/instagram.svg",
-                "url": "https://www.instagram.com/greenclicktechnologies/"
+                "url": "https://www.instagram.com/greenclicktechnologies/",
+                "alt": "Instagram Icon"
             }
         ],
         "tabs": [
@@ -305,22 +334,23 @@
     "photos": {
         "title": "Gallery",
         "photos": [
-            { "src": "/gallery/veemo-outside.webp", "width": 1200, "height": 1200, "key": "1"},
-            { "src": "/gallery/tesla.jpg", "width": 5650, "height": 3766, "key": "2"},
-            { "src": "/gallery/veemo-protective.webp", "width": 1200, "height":  1200,"key": "3"},
-            { "src": "/gallery/vacation.jpg", "width": 3124, "height": 2500, "key": "4"},
-            { "src": "/gallery/kona.jpg", "width": 6083, "height": 4055, "key": "5"},
-            { "src": "/gallery/electric.jpg", "width": 3653, "height": 2655, "key": "6"},
-            { "src": "/gallery/veemo-standalone.webp", "width": 1600, "height": 889, "key": "7"}
+            { "src": "/gallery/veemo-outside.webp", "alt": "Person Driving Veemo on Street", "width": 1200, "height": 1200, "key": "1"},
+            { "src": "/gallery/tesla.jpg", "alt": "Tesla Vehicle", "width": 5650, "height": 3766, "key": "2"},
+            { "src": "/gallery/veemo-protective.webp", "alt": "Person Driving Veemo wearing Helmet", "width": 1200, "height":  1200,"key": "3"},
+            { "src": "/gallery/vacation.jpg", "alt": "Resort with Seating and Sunset", "width": 3124, "height": 2500, "key": "4"},
+            { "src": "/gallery/kona.jpg", "alt": "Hyundai Kona Vehicle", "width": 6083, "height": 4055, "key": "5"},
+            { "src": "/gallery/electric.jpg", "alt": "Electric Vehicle is Charging", "width": 3653, "height": 2655, "key": "6"},
+            { "src": "/gallery/veemo-standalone.webp", "alt": "Closeup of Veemo E-Bike", "width": 1600, "height": 889, "key": "7"}
         ]
     },
     "blog": {
-        "title": "Greenclick Blog"
+        "title": "Stories on Greenclick"
     },
     "metadata": {
-        "site_title": "First 24/7 Contactless Hotel Car Rental Service | Greenclick Technologies",
+        "site_title": "Greenclick Technologies | First 24/7 Contactless Hotel Car Rental Service ",
         "short_title": "| Greenclick Technologies",
         "site_description": "Worlds first 24/7 car rental service at hotels. Completing the end-to-end vacation experience for guests.",
-        "site_image": "/banner.png"
+        "site_image": "/banner.png",
+        "alt": "Banner for Greenclick Technologies"
     }
 }

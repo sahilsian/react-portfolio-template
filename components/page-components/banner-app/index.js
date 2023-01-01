@@ -14,6 +14,7 @@ const BannerApp = () => {
             <Banner
                 title={config.banner_app.text.title}
                 description={config.banner_app.text.description}
+                alt={config.banner_app.images.alt}
             >
             </Banner>
         </Container>

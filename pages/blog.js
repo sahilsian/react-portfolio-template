@@ -55,9 +55,12 @@ const Blog = ({posts}) => {
                     {posts.filter(e => e.frontmatter.index == true).map((post, index)=> {
                         return (
                             <PostCard
-                            title={post.frontmatter.title.slice(0, 46) + "..."}
-                            description={post.frontmatter.excerpt.slice(0, 43)}
+                            title={post.frontmatter.title}
+                            description={post.frontmatter.excerpt}
                             href={`/pages/${post.slug}`}
+                            img={post.frontmatter.cover_image}
+                            date={"Posted on " + post.frontmatter.date + " — " + post.frontmatter.tags}
+                            alt={post.frontmatter.alt}
                             >
                             </PostCard>
                         )

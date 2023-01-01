@@ -7,7 +7,7 @@ const Container = styled.div`
     width: 100%;
     padding: 50px 0px;
 `;
-const Info = ({title, description, src, maindirection, reverse}) => {
+const Info = ({title, description, src, maindirection, reverse, alt}) => {
     return (
         <Container>
         <SideSide
@@ -16,6 +16,7 @@ const Info = ({title, description, src, maindirection, reverse}) => {
             description={description}
             src={src}
             reverse={reverse}
+            alt={alt}
         ></SideSide>
         </Container>
     )

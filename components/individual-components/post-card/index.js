@@ -7,50 +7,68 @@ import Link from 'next/link';
 
 const Container = styled.div`
     width: 100%;
-    max-width: 350px;
-    min-width: 300px;
-    height: 500px;
+    max-width: 780px;
     border-radius: 20px;
     transition: all 0.3s;
     position: relative;
-    box-shadow: ${props=>props.reverse ? " -35px 35px 68px 0px #4aaf6e20, inset 8px -8px 16px 0px #4aaf6e50, inset 0px 11px 28px 0px rgb(255, 255, 255)" : " 35px 35px 68px 0px #4aaf6e20, inset -8px -8px 16px 0px #4aaf6e50, inset 0px 11px 28px 0px rgb(255, 255, 255)"};
-    &:hover {
-        box-shadow: ${props=>props.reverse ? "-35px 35px 68px 0px #4aaf6e40" : "35px 35px 68px 0px #4aaf6e40"} ;
-        cursor: pointer;
-    }
+    border-bottom: 1px solid #00000010;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 `;
 
 const ImageWrapper = styled.img`
     width: 100%;
-    border-radius: 20px 20px 0px 0px;
-    max-height: 200px;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
 `;
 
 const TextContainer = styled.div`
-    padding: 20px;
-    overflow: hidden;
+    padding: 20px 0px;
     height: 100%;
     width: 100%;
     box-sizing: border-box;
-
 `;
 
-const PostCard = ({img, title, date, description, href}) => {
+const AuthorContainer = styled.div`
+    display: flex;
+    padding: 20px 0px;
+`;
+
+const AuthorIcon = styled.div`
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #00000010;
+    border-radius: 100px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+`
+
+const Img = styled.img`
+    width: 30px;
+    height: auto;
+`;
+
+const ItemContainer = styled.div`
+    padding: 7px 15px;
+`;
+
+const PostCard = ({img, title, date, description, href, alt}) => {
     return (
         <Container>
-
-            <ImageWrapper src={img}>
+            <AuthorContainer>
+                <AuthorIcon >
+                    <Img alt={"Logo"} src='/greenclick-green.png'></Img>
+                </AuthorIcon>
+                <ItemContainer>
+                    <TextLabel padding={"0px"} weight={'500'} labelsize={"15px"} color={config.navigation.colors.text} text={"Greenclick Technologies"}></TextLabel>
+                    <TextLabel weight={'300'} padding={"0px"} labelsize={"15px"} color={config.navigation.colors.subtext} text={date}></TextLabel>
+                </ItemContainer>
+            </AuthorContainer>
+            <ImageWrapper alt={alt} src={img}>
             </ImageWrapper>
             <TextContainer>
-                <TextLabel 
-                color={config.navigation.colors.subtext} 
-                text={date}
-                labelsize={"14px"}
-                weight={"400"}
-                padding={'3px'}
-                ></TextLabel>
                 <TextLabel 
                 color={config.navigation.colors.text} 
                 text={title}
@@ -58,7 +76,7 @@ const PostCard = ({img, title, date, description, href}) => {
                 ></TextLabel>
                 <TextLabel
                 color={config.navigation.colors.text}
-                text={description + '...'}
+                text={description}
                 weight={"400"}
                 padding={'20px'}
                 >

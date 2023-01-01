@@ -67,12 +67,12 @@ const ContainerNested = styled.div`
 
 
 
-const SingleImageCard = ({title, src,reverse, descriptiontitle, descriptiondescription}) => {
+const SingleImageCard = ({title, src,reverse, descriptiontitle, descriptiondescription, alt}) => {
     const [selectedCar, setSelectedCar] = useState(0)
     return (
         <Container reverse={reverse}>
             <ContainerNested>
-                <Image src={src}></Image>
+                <Image alt={alt} src={src}></Image>
             </ContainerNested>
             {/* <Title>{title}</Title> */}
             <HoverContainer>
