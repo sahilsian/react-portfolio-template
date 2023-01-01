@@ -117,7 +117,7 @@ const PostPage = ({posts, frontmatter: {title, date, cover_image, read, excerpt}
                 <meta content={title} property="og:title" />
                 <meta content={excerpt} property="og:description" />
                 <meta content={config.navigation.colors.accent} data-react-helmet="true" name="theme-color" />
-                <meta content={window.location.origin + cover_image} property="og:image:url" />
+                <meta content={window.location.origin + cover_image} property="og:image" />
                 <meta property="og:image:secure_url" content={window.location.origin + cover_image}/>
                 <meta content={window.location.href} property="og:url" />
                 <meta property="og:image:type" content="image/jpeg" /> 
