@@ -9,7 +9,7 @@ import useWindowDimensions from '../../../hooks/useWIndowDimensions';
 
 const Container = styled.div`
     width: 100%;
-    padding-top: 50px;
+    padding-top: 100px;
     position: relative;
 `;
 

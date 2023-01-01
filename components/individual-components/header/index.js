@@ -1,4 +1,4 @@
-import react, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
 import Logo from "../logo";
 import NavigationMenu from "../navigation-menu";
@@ -9,6 +9,7 @@ import CustomButton from "../custom-button";
 import useWindowDimensions from "../../../hooks/useWIndowDimensions";
 import Icon from "../icon";
 import MobileMenu from "../mobile-menu";
+import useOnClickOutside from "../../../hooks/useOnClickOutside";
 
 const MainContainer = styled.div`
   box-sizing: border-box;
@@ -61,14 +62,19 @@ const Header = () => {
   const [menuRender, setMenuRender] = useState([]);
   const { width, height } = useWindowDimensions();
   const [menuMobile, setMenuMobile] = useState(false);
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       window.scrollY > 50 ? setBackground(true) : setBackground(false);
     });
   }, []);
 
+  const ref = useRef();
+  useOnClickOutside(ref, () => setDropdown(""));
+
+
   return (
-    <Wrapper>
+    <Wrapper ref={ref}>
       <MainContainer bgcolor={background} boxShadow={background}>
         <OffsetContainer>
           <FlexBody flex={width < 1110 ? 3 : 2}>

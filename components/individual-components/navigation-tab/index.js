@@ -10,6 +10,9 @@ const TabText = styled.p`
     color: ${props=>props.color ? config.navigation.colors.primary : config.navigation.colors.secondary};
     color: ${props=>props.colorImportant};
     padding-right: 8px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 `;
 
 const Container = styled.div`

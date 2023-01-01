@@ -9,6 +9,9 @@ const HeadingLink = styled.p`
     color: ${props=>props.color ? config.navigation.colors.primary : config.navigation.colors.secondary};
     padding-right: 8px;
     min-width: 300px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 `;
 
 const Container = styled.div`
@@ -30,6 +33,9 @@ const HeadingSubText = styled.p`
     padding: 0;
     color: ${props=>props.color ? config.navigation.colors.subtext : config.navigation.colors.secondary + "80"};
     padding-right: 8px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 `;
 
 const NavigationItem = ({onClick, tabName, description, hover, color}) => {

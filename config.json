@@ -306,17 +306,12 @@
         "title": "Gallery",
         "photos": [
             { "src": "/gallery/veemo-outside.webp", "width": 1200, "height": 1200, "key": "1"},
-            { "src": "/gallery/veemo-protective.webp", "width": 1200, "height": 1200, "key": "2"},
-            { "src": "/gallery/tesla.jpg", "width": 5650, "height": 3766 ,"key": "3"},
-            { "src": "/gallery/veemo-protective.webp", "width": 1200, "height": 1200, "key": "4"},
-            { "src": "/gallery/tesla.jpg", "width": 5650, "height": 3766, "key": "5"},
-            { "src": "/gallery/veemo-protective.webp", "width": 1200, "height": 1200, "key": "6"},
-            { "src": "/gallery/veemo-outside.webp", "width": 1200, "height": 1200, "key": "7"},
-            { "src": "/gallery/veemo-protective.webp", "width": 1200, "height": 1200, "key": "8"},
-            { "src": "/gallery/tesla.jpg", "width": 5650, "height": 3766, "key": "9"},
-            { "src": "/gallery/veemo-protective.webp", "width": 1200, "height": 1200, "key": "10"},
-            { "src": "/gallery/tesla.jpg", "width": 5650, "height": 3766, "key": "11"},
-            { "src": "/gallery/veemo-protective.webp", "width": 1200, "height": 1200, "key": "12"}
+            { "src": "/gallery/tesla.jpg", "width": 5650, "height": 3766, "key": "2"},
+            { "src": "/gallery/veemo-protective.webp", "width": 1200, "height":  1200,"key": "3"},
+            { "src": "/gallery/vacation.jpg", "width": 3124, "height": 2500, "key": "4"},
+            { "src": "/gallery/kona.jpg", "width": 6083, "height": 4055, "key": "5"},
+            { "src": "/gallery/electric.jpg", "width": 3653, "height": 2655, "key": "6"},
+            { "src": "/gallery/veemo-standalone.webp", "width": 1600, "height": 889, "key": "7"}
         ]
     },
     "blog": {

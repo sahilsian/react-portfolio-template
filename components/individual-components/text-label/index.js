@@ -18,6 +18,9 @@ const Label = styled.p`
         color: ${props=>props.hover ? props.hover : props.color};
         transition: 0.2s all ease;
     }
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 `;
 
 const TextLabel = ({text, center, labelsize, color, padding, weight, hover}) => {
