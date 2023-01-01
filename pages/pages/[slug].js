@@ -124,6 +124,7 @@ const PostPage = ({posts, frontmatter: {title, date, cover_image, read, excerpt}
                 <meta property="og:image:width" content="400" /> 
                 <meta property="og:image:height" content="100" />
                 <meta property="og:type" content="text.blog" />
+                <meta name="og:site_name" content="Greenclick Technologies"></meta>
             </Head>
             <Header></Header>
             <ItemContainer flex={width < 1100}>
