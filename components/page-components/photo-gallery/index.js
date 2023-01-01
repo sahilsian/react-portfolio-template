@@ -33,7 +33,7 @@ const PhotoGallery = () => {
                 index={index}
                 close={() => setIndex(-1)}
             />
-            <TextLabel weight={"700"} padding={"40px"} labelsize={width < 1100 ? "38px" : "48px"} center color={config.navigation.colors.text} text={config.photos.title}></TextLabel>
+            <TextLabel weight={"700"} padding={"40px"} labelsize={width < 1100 ? "38px" : "54px"} center color={config.navigation.colors.text} text={config.photos.title}></TextLabel>
             <PhotoAlbum 
             layout="rows"
             columns

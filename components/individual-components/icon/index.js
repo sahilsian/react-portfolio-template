@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
-    width: 100%;
+    width: auto;
     height: 100%;
     cursor: pointer;
     display: ${props=>props.display ? "none" : "flex"};

@@ -9,6 +9,7 @@ import FooterApp from '../components/page-components/footer-app'
 import TextLabel from '../components/individual-components/text-label'
 import config from '../config.json'
 import useWindowDimensions from '../hooks/useWIndowDimensions'
+import SiteHead from '../components/individual-components/head'
 
 const Container = styled.div`
     display: flex;
@@ -34,6 +35,10 @@ const Blog = ({posts}) => {
     console.log(posts)
     return (
         <Wrap>
+            <SiteHead
+            title={"Blog " + config.metadata.short_title}
+            >
+            </SiteHead>
             <Header></Header>
 
             <MainContainer>

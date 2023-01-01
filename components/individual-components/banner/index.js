@@ -57,7 +57,7 @@ const Banner = ({image, title, description}) => {
                 <FlexContainer>
                     <TextLabel
                     text={title}
-                    labelsize={width < 980 ? "38px" : "48px"}
+                    labelsize={width < 980 ? "38px" : "54px"}
                     weight={"700"}
                     center={width < 980}
                     >

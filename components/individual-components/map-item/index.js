@@ -6,8 +6,9 @@ import config from "../../../config.json";
 const Container = styled.div`
   background-color: #fff;
   display: flex;
-  height: 140px;
+  min-height: 120px;
   border: 1px solid #00000010;
+  margin-bottom: 10px;
 `;
 const Image = styled.img`
     width: 100%;
@@ -31,25 +32,31 @@ const Details = styled.div`
   box-sizing: border-box;
 `;
 
-const MapItem = () => {
+const MapItem = ({src, text, subtext, onClick}) => {
   return (
-    <Container>
+    <Container onClick={onClick}>
       <ContainerImage>
-        <Image src="/hotel.jpg"></Image>
+        <Image src={src}></Image>
       </ContainerImage>
       <Details>
         <TextLabel
           color={config.navigation.colors.text}
           padding={"4px"}
-          text={"Fairmont Hotel Vancouver"}
+          text={text}
         ></TextLabel>
         <TextLabel
           color={config.navigation.colors.subtext}
-          text={"5 Cars Available"}
+          text={subtext}
         ></TextLabel>
       </Details>
     </Container>
   );
 };
+
+MapItem.defaultProps = {
+  src: '/hotel.jpg',
+  text: 'Example Card',
+  subtext: 'This is an Example Card'
+}
 
 export default MapItem;

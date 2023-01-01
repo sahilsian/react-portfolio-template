@@ -316,5 +316,11 @@
     },
     "blog": {
         "title": "Greenclick Blog"
+    },
+    "metadata": {
+        "site_title": "First 24/7 Contactless Hotel Car Rental Service | Greenclick Technologies",
+        "short_title": "| Greenclick Technologies",
+        "site_description": "Worlds first 24/7 car rental service at hotels. Completing the end-to-end vacation experience for guests.",
+        "site_image": "/banner.png"
     }
 }

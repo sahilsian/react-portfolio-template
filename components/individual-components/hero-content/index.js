@@ -17,6 +17,7 @@ const Container = styled.div`
     box-sizing: border-box;
     flex-direction: ${props=>props.direction ? "column-reverse": "row"};
     padding-top: 50px;
+    background-color: rgba(17, 25, 40, 1);
 `;
 
 const FlexContainer = styled.div`
@@ -32,7 +33,7 @@ const FlexContainer = styled.div`
 const PrimaryText = styled.h1`
     margin: 0;
     color: #fff;
-    font-size: ${props=>props.size ? "38px": "64px"};
+    font-size: ${props=>props.size ? "38px": "68px"};
     line-height: ${props=>props.size ? "48px": "78px"};
     padding-bottom: 12px;
     text-align: ${props=>props.center ? "center" : "left"};

@@ -41,7 +41,7 @@ const TeamLayout = () => {
             text={"Meet the Team"}
             color={config.navigation.colors.text}
             padding={"100px"}
-            labelsize={width < 980 ? "38px" : "48px"}
+            labelsize={width < 980 ? "38px" : "54px"}
             weight={"700"}
             center
             >
