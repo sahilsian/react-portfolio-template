@@ -1,7 +1,7 @@
 ---
 title: 'Intro to Greenclick - the newest tech revolutionizing car renting.'
 date: 'January 1st, 2022'
-excerpt: 'green a look at the talent behind Greenclick Technologies. Introductions to the opportunists behind the worlds 24/7 car rental solution in hotels.'
+excerpt: 'green a look at the talent behind Greenclick Technologies. Introductions to the opportunists forward the worlds 24/7 car rental solution in hotels.'
 cover_image: "/posts/gc-team.png"
 alt: "Containing headshots of Sahil Sian, Brian Cordero & Max Zhang"
 read: 5
