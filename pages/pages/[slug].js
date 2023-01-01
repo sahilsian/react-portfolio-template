@@ -117,11 +117,16 @@ const PostPage = ({posts, frontmatter: {title, date, cover_image, read, excerpt}
                 <meta content={title} property="og:title" />
                 <meta content={excerpt} property="og:description" />
                 <meta content={config.navigation.colors.accent} data-react-helmet="true" name="theme-color" />
-                <meta property="og:image:secure_url" content={window.location.origin + cover_image}/>
                 <meta content={window.location.href} property="og:url" />
+
+                <meta property="og:image" content={window.location.origin + cover_image}/>
                 <meta property="og:image:type" content="image/jpeg" /> 
                 <meta property="og:image:width" content="400" /> 
                 <meta property="og:image:height" content="100" />
+                <meta property="og:image:alt" content="Blog Cover" />
+                <meta property="og:image:secure_url" content={window.location.origin + cover_image}/>
+
+
                 <meta property="og:type" content="text.blog" />
                 <meta name="og:site_name" content="Greenclick Technologies"></meta>
             </Head>
