@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import TextLabel from "../text-label";
 import config from "../../../config.json";
+import useWindowDimensions from "../../../hooks/useWIndowDimensions";
 
 const Container = styled.div`
   background-color: #fff;
@@ -9,6 +10,7 @@ const Container = styled.div`
   min-height: 120px;
   border: 1px solid #00000010;
   margin-bottom: 10px;
+  max-height: 150px;
 `;
 const Image = styled.img`
     width: 100%;
@@ -33,6 +35,7 @@ const Details = styled.div`
 `;
 
 const MapItem = ({src, text, subtext, onClick}) => {
+  const {width, height} = useWindowDimensions()
   return (
     <Container onClick={onClick}>
       <ContainerImage>

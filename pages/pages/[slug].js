@@ -10,6 +10,7 @@ import FooterApp from '../../components/page-components/footer-app'
 import config from '../../config.json'
 import BannerApp from '../../components/page-components/banner-app'
 import Icon from '../../components/individual-components/icon'
+import useWindowDimensions from '../../hooks/useWIndowDimensions'
 import {
     EmailShareButton,
     FacebookShareButton,
@@ -59,7 +60,8 @@ const ItemContainer = styled.div`
     min-height: 500px;
     padding: 50px 20px;
     padding-top: 160px;
-    display: flex;
+    display: ${props=>props.flex ? "block" : "flex"};
+    box-sizing: border-box;
 `;
 
 const FlexItem = styled.div`
@@ -105,7 +107,7 @@ const PostPage = ({posts, frontmatter: {title, date, cover_image, read, excerpt}
     useEffect(()=> {
         setRandomPosts(getRandom(posts, 5))
     }, [])
-
+    const {width, height} = useWindowDimensions()
     return (
         <Container>
             <Head>
@@ -119,7 +121,7 @@ const PostPage = ({posts, frontmatter: {title, date, cover_image, read, excerpt}
                 <meta content={window.location.href} property="og:url" />
             </Head>
             <Header></Header>
-            <ItemContainer>
+            <ItemContainer flex={width < 1100}>
                 <FlexItem flex={"2"}>
                 <ImageContainer src={cover_image}>
                 </ImageContainer>
@@ -149,7 +151,7 @@ const PostPage = ({posts, frontmatter: {title, date, cover_image, read, excerpt}
                 <div className='content_prop' dangerouslySetInnerHTML={{__html: marked(content)}}>
                 </div>
                 </FlexItem>
-                <FlexItem padding>
+                <FlexItem padding={width > 1100}>
                     <TextLabel color={config.navigation.colors.text} weight={'500'} labelsize={"24px"} text={"Explorer More"}></TextLabel>
                 
                     {randomPosts.filter(e => (e.frontmatter.index == true && e.slug != slug) ).map((post, index)=> {

@@ -14,8 +14,9 @@ import SiteHead from '../components/individual-components/head'
 const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 50px;
+    align-items: center;
 `;
 
 const MainContainer = styled.div`
@@ -24,6 +25,7 @@ const MainContainer = styled.div`
     padding: 100px 20px;
     margin: auto;
     padding-top: 200px;
+    box-sizing: border-box;
 `;
 
 const Wrap = styled.div`
@@ -53,8 +55,8 @@ const Blog = ({posts}) => {
                     {posts.filter(e => e.frontmatter.index == true).map((post, index)=> {
                         return (
                             <PostCard
-                            title={post.frontmatter.title}
-                            description={post.frontmatter.excerpt}
+                            title={post.frontmatter.title.slice(0, 46) + "..."}
+                            description={post.frontmatter.excerpt.slice(0, 43)}
                             href={`/pages/${post.slug}`}
                             >
                             </PostCard>

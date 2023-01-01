@@ -17,7 +17,6 @@ const Container = styled.div`
     box-sizing: border-box;
     flex-direction: ${props=>props.direction ? "column-reverse": "row"};
     padding-top: 50px;
-    background-color: rgba(17, 25, 40, 1);
 `;
 
 const FlexContainer = styled.div`
