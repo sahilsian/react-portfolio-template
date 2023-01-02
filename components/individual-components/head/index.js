@@ -8,7 +8,6 @@ const SiteHead = ({title, description, banner}) => {
         <Head>
             <title>{title}</title>
             <link rel="shortcut icon" type="image/png" href="/favicon.png" />
-            <link rel="icon" href="/favicon.ico" />
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             <meta content={title} property="og:title" />
             <meta content={description} property="og:description" />

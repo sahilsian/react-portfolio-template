@@ -9,7 +9,7 @@ index: true
 tags: "Company, Team"
 ---
 
-Greenclick technologies are the world's first contactless car rental service operating in hotels. With these changes to the car rental landscape, comes a team of highly skilled opportunists building the components to make them possible. Here's an introduction to the core Greenclick team, responsible for advancements such as the Greenclick Valet Box, the Greenclick App, and more.
+Greenclick Technologies is the world's first contactless car rental service operating in hotels. With these changes to the car rental landscape, comes a team of highly skilled opportunists building the components to make them possible. Here's an introduction to the core Greenclick team, responsible for advancements such as the Greenclick Valet Box, the Greenclick App, and more.
 
 ## Founder & CEO, Brian Cordero
 
