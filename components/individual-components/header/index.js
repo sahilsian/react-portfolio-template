@@ -147,9 +147,6 @@ const Header = () => {
               return (
                 <NavigationItem
                   color={background}
-                  onClick={() => {
-                    setDropdown("");
-                  }}
                   hover={background}
                   tabName={e.name}
                   href={e.link}
@@ -169,7 +166,12 @@ const Header = () => {
                 }
                 tabName={e.name}
                 onClick={() => {
+                  if (dropdown == e.name) {
                     setDropdown("");
+                  } else {
+                    setDropdown(e.name);
+                    console.log(e.name)
+                  }
                 }}
               >
               </NavigationTab>
@@ -183,14 +185,10 @@ const Header = () => {
                     return (
                       <NavigationItem
                         href={e.link}
-                        onClick={() => {
-                          if (dropdown == e.name) {
-                            setDropdown("");
-                          } else {
-                            setDropdown(e.name);
-                          }
-                        }}
                         color={background}
+                        onClick={()=> {
+                          setMenuMobile(false)
+                        }}
                         hover={background}
                         tabName={e.name}
                         description={e.description}
