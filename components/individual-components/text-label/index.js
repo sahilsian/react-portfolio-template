@@ -4,6 +4,7 @@ import config from '../../../config.json'
 
 const Container = styled.div`
     width: 100%;
+    display ${props=>props.display ? "none" : "block"}
 `; 
 
 const Label = styled.p`
@@ -23,9 +24,9 @@ const Label = styled.p`
     user-select: none; /* Standard syntax */
 `;
 
-const TextLabel = ({text, center, labelsize, color, padding, weight, hover}) => {
+const TextLabel = ({text, center,display, labelsize, color, padding, weight, hover}) => {
     return (
-        <Container>
+        <Container display={display}>
             <Label hover={hover} weight={weight} center={center} color={color} padding={padding} labelsize={labelsize}>{text}</Label>
         </Container>
     )

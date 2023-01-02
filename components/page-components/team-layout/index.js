@@ -74,7 +74,7 @@ const TeamLayout = () => {
                 }
             </Margin>
             <Contain>
-                <CustomButton width={"150px"} outlined text={config.team.text.button}></CustomButton>
+                <CustomButton href={`${window.location.origin}/pages/team`} width={"150px"} outlined text={config.team.text.button}></CustomButton>
             </Contain>
         </Container>
     )

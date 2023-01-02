@@ -10,7 +10,6 @@ import TextLabel from '../components/individual-components/text-label'
 import config from '../config.json'
 import useWindowDimensions from '../hooks/useWIndowDimensions'
 import SiteHead from '../components/individual-components/head'
-
 const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -55,11 +54,12 @@ const Blog = ({posts}) => {
                     {posts.filter(e => e.frontmatter.index == true).map((post, index)=> {
                         return (
                             <PostCard
+                            emailTitle={`Greenclick: ${post.frontmatter.title}`}
                             title={post.frontmatter.title}
                             description={post.frontmatter.excerpt}
                             href={`/pages/${post.slug}`}
                             img={post.frontmatter.cover_image}
-                            date={"Posted on " + post.frontmatter.date + " — " + post.frontmatter.tags}
+                            date={post.frontmatter.date == "Coming Soon" ? post.frontmatter.date : "Posted on " + post.frontmatter.date + " — " + post.frontmatter.tags}
                             alt={post.frontmatter.alt}
                             >
                             </PostCard>

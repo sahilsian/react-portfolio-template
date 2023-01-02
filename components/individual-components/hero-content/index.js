@@ -78,7 +78,7 @@ const HeroContent = () => {
                 <SecondaryText size={width < 1100} center={width < 1100}>
                     {config.hero.text.secondary}
                 </SecondaryText>
-                <CustomButton  hide={width < 1100} outlined height={width < 1100 ? null : "60px"} width={"200px"} text={config.hero.text.cta_button}>
+                <CustomButton href={config.hero.text.link} hide={width < 1100} outlined height={width < 1100 ? null : "60px"} width={"200px"} text={config.hero.text.cta_button}>
                 </CustomButton>
             </FlexContainer>
                 

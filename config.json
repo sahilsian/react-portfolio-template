@@ -15,22 +15,22 @@
                     {
                         "name": "Valet Box",
                         "description": "Greenclick's on demand car rental solution",
-                        "link": ""
+                        "link": "/pages/greenclick-valet-box"
                     },
                     {
                         "name": "Car Fleets",
                         "description": "Our car fleets we deliver",
-                        "link": ""
+                        "link": "/pages/car-fleets"
                     },
                     {
                         "name": "App & Technology",
                         "description": "Our technical solutions to scale",
-                        "link": ""
+                        "link": "/pages/app-and-technology"
                     },
                     {
                         "name": "Customer Relationships",
                         "description": "Building strong customer relationships",
-                        "link": ""
+                        "link": "/pages/customer-relationships"
                     }
                 ]
             },
@@ -40,22 +40,17 @@
                     {
                         "name": "About",
                         "description": "About Greenclick",
-                        "link": ""
+                        "link": "/pages/about-greenclick"
                     },
                     {
                         "name": "Leadership",
                         "description": "How we're changing the landscape of car rentals",
-                        "link": ""
+                        "link": "/pages/greenclick-team"
                     },
                     {
                         "name": "Blog",
                         "description": "See what greenclick is up to",
-                        "link": ""
-                    },
-                    {
-                        "name": "Careers",
-                        "description": "Start your career at Greenclick",
-                        "link": ""
+                        "link": "/blog"
                     }
                 ]
             },
@@ -63,23 +58,17 @@
                 "name": "Contact",
                 "tabs": [
                     {
-                        "name": "Support",
-                        "description": "Get help with our dedicated support team",
-                        "link": ""
-                    },
-                    {
-                        "name": "Status",
-                        "description": "Greenclick server status",
-                        "link": ""
-                    },
-                    {
                         "name": "Contact Us",
                         "description": "Want to work with greenclick, contact us",
-                        "link": ""
+                        "link": "/pages/contact"
                     }
                 ]
             }
-        ]
+        ],
+        "buttton": {
+            "title": "Learn More",
+            "link": "/pages/about-greenclick"
+        }
     },
     "hero": {
         "video_1": "/hero-video.webm",
@@ -105,7 +94,8 @@
             "primary": "Car Renting should be Comfortable",
             "highlighted_word_primary": "Comfortable",
             "secondary": "Rent your vehicle directly at your hotel, at any time. Greenclick is the first 24/7 car rental service operating at select hotels.",
-            "cta_button": "Get Started"
+            "cta_button": "Learn More",
+            "link": "/pages/about-greenclick"
         }
     },
     "rental": {
@@ -120,7 +110,7 @@
     "side_one": {
         "text": {
             "title": "Operating 24/7",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "description": "At any time throughout your hotel visit, purchase your car rental on our mobile app and head to the Greenclick Valet Box where you can access the keys to your vehicle.",
             "description_title": "Greenclick Valet Kiosk",
             "description_description": "The Greenclick Valet Kiosk stores your rental keys and is located inside the hotel lobby. You can access and return keys into the box by using our Greenclick App."
         },
@@ -132,7 +122,7 @@
     "side_two": {
         "text": {
             "title": "Smart Cars, E-Bikes & More",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "description": "Greenclick offers an inventory of Cars and Mico Mobility such as E-Bikes, E-Scooters, and more. This makes getting around during your vacation more enjoyable and affordable.",
             "description_title": "Veemo E-Bike",
             "description_description": "Coming Soon."
         },
@@ -262,22 +252,22 @@
                     {
                         "name": "Valet Box",
                         "description": "Greenclick's on demand car rental solution",
-                        "link": ""
+                        "link": "/pages/greenclick-valet-box"
                     },
                     {
                         "name": "Car Fleets",
                         "description": "Our car fleets we deliver",
-                        "link": ""
+                        "link": "/pages/car-fleets"
                     },
                     {
                         "name": "App & Technology",
                         "description": "Our technical solutions to scale",
-                        "link": ""
+                        "link": "/pages/app-and-technology"
                     },
                     {
                         "name": "Customer Relationships",
                         "description": "Building strong customer relationships",
-                        "link": ""
+                        "link": "/pages/customer-relationships"
                     }
                 ]
             },
@@ -287,22 +277,17 @@
                     {
                         "name": "About",
                         "description": "About Greenclick",
-                        "link": ""
+                        "link": "/pages/about-greenclick"
                     },
                     {
                         "name": "Leadership",
                         "description": "How we're changing the landscape of car rentals",
-                        "link": ""
+                        "link": "/pages/greenclick-team"
                     },
                     {
                         "name": "Blog",
                         "description": "See what greenclick is up to",
-                        "link": ""
-                    },
-                    {
-                        "name": "Careers",
-                        "description": "Start your career at Greenclick",
-                        "link": ""
+                        "link": "/blog"
                     }
                 ]
             },
@@ -310,19 +295,9 @@
                 "name": "Contact",
                 "tabs": [
                     {
-                        "name": "Support",
-                        "description": "Get help with our dedicated support team",
-                        "link": ""
-                    },
-                    {
-                        "name": "Status",
-                        "description": "Greenclick server status",
-                        "link": ""
-                    },
-                    {
                         "name": "Contact Us",
                         "description": "Want to work with greenclick, contact us",
-                        "link": ""
+                        "link": "/pages/contact"
                     }
                 ]
             }

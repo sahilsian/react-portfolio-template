@@ -105,9 +105,9 @@ const Header = () => {
           </FlexBody>
           <FlexBody display={width < 1100} gap={"10px"} justify flex={1}>
             <CustomButton
+              href={config.navigation.buttton.link}
               width={"200px"}
-              outlined
-              text={"Start your Rental"}
+              text={config.navigation.buttton.title}
             ></CustomButton>
           </FlexBody>
 
