@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 import styled from 'styled-components'
 import config from '../../../config.json'
@@ -38,12 +39,14 @@ const HeadingSubText = styled.p`
     user-select: none; /* Standard syntax */
 `;
 
-const NavigationItem = ({onClick, tabName, description, hover, color}) => {
+const NavigationItem = ({onClick, tabName, description, hover, color, href}) => {
     return (
-        <Container hover={hover} onClick={onClick}>
-            <HeadingLink color={color}>{tabName}</HeadingLink>
-            <HeadingSubText color={color}>{description}</HeadingSubText>
-        </Container>
+        <Link href={href}>
+            <Container hover={hover} onClick={onClick}>
+                <HeadingLink color={color}>{tabName}</HeadingLink>
+                <HeadingSubText color={color}>{description}</HeadingSubText>
+            </Container>
+        </Link>
     )
 }
 

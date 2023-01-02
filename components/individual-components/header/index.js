@@ -149,6 +149,7 @@ const Header = () => {
                   color={background}
                   hover={background}
                   tabName={e.name}
+                  href={e.link}
                   description={e.description}
                 ></NavigationItem>
               );
@@ -183,7 +184,7 @@ const Header = () => {
                   .tabs.map((e) => {
                     return (
                       <NavigationItem
-                        
+                        href={e.link}
                         color={background}
                         hover={background}
                         tabName={e.name}
