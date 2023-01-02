@@ -32,3 +32,4 @@ Sahil Sian is a Senior Frontend Developer & Designer graduating from British Col
 
 Max Zhang is a junior at Santa Clara University pursuing a Bachelor's in Finance. Max has worked for the past couple summers in various roles that have prepared him to work in a professional setting with a breadth of work experience. Furthermore, Max has held the status of being a top-ranked national-level high school debater, holding strong analytical, critical thinking, and research skills.
 
+![Image of Greenclick Technologies CFO, Max Zhang](/example.jpg)

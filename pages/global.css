@@ -11,10 +11,13 @@ h1 {
 }
 
 .content_prop img {
-    max-height: 400px;
     display: block;
     padding-bottom: 5px;
     box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    max-width: 500px;
+    object-fit: contain;
 }
 
 .content_prop {
