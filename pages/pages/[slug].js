@@ -64,11 +64,9 @@ const ItemContainer = styled.div`
 `;
 
 const FlexItem = styled.div`
-  display: ${props=>props.hide ? "none" : "flex"};
+  display: ${props=>props.hide ? "none" : "block"};
   padding: ${(props) => (props.padding ? "0px 20px" : "0px")};
   flex: ${(props) => props.flex || "1"};
-  align-items: center;
-  flex-direction: column;
 `;
 
 const TitleContainer = styled.div`
@@ -94,7 +92,7 @@ const BreadcrumbContainer = styled.div`
 
 const LinkA = styled.a`
     font-size: 15px;
-    color: ${config.navigation.colors.text};
+    color: ${props=>props.color ? config.navigation.colors.accent : config.navigation.colors.text};
     cursor: pointer;
     transition: 0.2s all ease;
     &:hover {
@@ -131,7 +129,7 @@ const PostPage = ({
   }
 
   useEffect(() => {
-    setRandomPosts(getRandom(posts, 1));
+    setRandomPosts(getRandom(posts, 4));
   }, []);
   const { width, height } = useWindowDimensions();
   return (
@@ -182,15 +180,16 @@ const PostPage = ({
                 <Span>
                 /
                 </Span>
-                <LinkA href={`/pages/${slug}`}>{slug.replace('-', ' ')}</LinkA>
+                <LinkA color href={`/pages/${slug}`}>{slug.replace('-', ' ')}</LinkA>
                 </>
                 :
                 <>
-                <LinkA href={`/pages/${slug}`}>{slug.replace('-', ' ')}</LinkA>
+                <LinkA color href={`/pages/${slug}`}>{slug.replace('-', ' ')}</LinkA>
                 </>
             }
         </BreadcrumbContainer>
           <ImageContainer src={cover_image}></ImageContainer>
+          
           <h1>
             <TextLabel
               color={config.navigation.colors.text}
@@ -211,7 +210,7 @@ const PostPage = ({
             display={!index}
             color={config.navigation.colors.subtext}
             labelsize={"15px"}
-            text={"Posted On " + date + " — " + read + " min read"}
+            text={date == "Coming Soon" ? "Coming Soon" : "Posted On " + date + " — " + read + " min read"}
           ></TextLabel>
           <IconContainer>
             <EmailShareButton
@@ -240,6 +239,7 @@ const PostPage = ({
             className="content_prop"
             dangerouslySetInnerHTML={{ __html: marked(content) }}
           ></div>
+          
         </FlexItem>
         <FlexItem hide={!index} padding={width > 1100}>
           <TextLabel
