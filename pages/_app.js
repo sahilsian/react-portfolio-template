@@ -4,9 +4,8 @@ import Loading from '../components/individual-components/loading';
 export default function MyApp({ Component, pageProps }) {
     const [mounted, setMounted] = useState(false);
     useEffect(() => {
-        setTimeout(()=> {
-            setMounted(true);
-        }, 1000)
+        setMounted(true);
+
     }, [])
 
     if (!mounted) {
