@@ -44,7 +44,7 @@ const HeadingSubText = styled.p`
 
 const NavigationItem = ({onClick, tabName, description, hover, color, href}) => {
     return (
-        <Link href={href}>
+        <Link style={{textDecoration: 'none'}} href={href}>
             <Container hover={hover} onClick={onClick}>
                 <HeadingLink color={color}>{tabName}</HeadingLink>
                 <HeadingSubText color={color}>{description}</HeadingSubText>
