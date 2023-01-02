@@ -10,7 +10,7 @@ export default function MyApp({ Component, pageProps }) {
     }, [])
 
     if (!mounted) {
-        return <Loading />;
+        return null;
     }
     console.log('Built by Sahil Sian. https://cssahil.com')
     return <Component {...pageProps} />
