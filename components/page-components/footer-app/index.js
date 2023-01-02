@@ -12,7 +12,7 @@ const ItemContainer = styled.div`
 
 const FooterApp = () => {
     return (
-        <Footer>
+        <Footer email={config.footer.text.email} copywrite={config.footer.text.copyright} backdrop={config.footer.images.backdrop}>
             {config.footer.tabs.map((e)=> {
                 return (
                     <ItemContainer>

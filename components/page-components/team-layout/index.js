@@ -40,7 +40,7 @@ const TeamLayout = () => {
     return (
         <Container>
             <TextLabel
-            text={"Meet the Team"}
+            text={config.team.text.title}
             color={config.navigation.colors.text}
             padding={"50px"}
             labelsize={width < 980 ? "38px" : "54px"}
@@ -74,7 +74,7 @@ const TeamLayout = () => {
                 }
             </Margin>
             <Contain>
-                <CustomButton href={`${window.location.origin}/pages/team`} width={"150px"} outlined text={config.team.text.button}></CustomButton>
+                <CustomButton href={config.team.text.link} width={"150px"} outlined text={config.team.text.button}></CustomButton>
             </Contain>
         </Container>
     )

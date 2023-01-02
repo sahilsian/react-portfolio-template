@@ -10,6 +10,7 @@ import NavigationItem from '../components/individual-components/navigation-item'
 import FooterApp from '../components/page-components/footer-app';
 import SiteHead from '../components/individual-components/head';
 import PhotoGallery from '../components/page-components/photo-gallery';
+import Contact from '../components/page-components/contact';
 
 const Container = styled.div`
     width: 100%;
@@ -25,8 +26,8 @@ function HomePage() {
         <Hero></Hero>
         <Rental></Rental>
         <Info
-        descriptiondescription={config.side_one.text.description_description}
-        descriptiontitle={config.side_one.text.description_title}
+          descriptiondescription={config.side_one.text.description_description}
+          descriptiontitle={config.side_one.text.description_title}
           title={config.side_one.text.title}
           description={config.side_one.text.description}
           src={config.side_one.images.image1}
@@ -42,13 +43,13 @@ function HomePage() {
           src={config.side_two.images.image1}
           reverse
           alt={config.side_two.images.alt}
-          
         >
         </Info>
         <BannerApp
         ></BannerApp>
         <TeamLayout></TeamLayout>
         <PhotoGallery></PhotoGallery>
+        <Contact></Contact>
        <FooterApp></FooterApp>
       </Container>
     ) 

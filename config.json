@@ -1,101 +1,86 @@
 {
     "navigation": {
-        "logo": "/greenclick-long.svg",
+        "logo": "/defaults/logo_default.png",
         "colors": {
             "primary": "#04060A",
             "secondary": "#FFFFFF",
             "text": "#04060A",
             "subtext": "#04060A60",
-            "accent": "#4AAF6E"
+            "accent": "#FAD"
         },
         "tabs": [
             {
-                "name": "Products & Services",
+                "name": "Example Tab",
                 "tabs": [
                     {
-                        "name": "Valet Box",
-                        "description": "Greenclick's on demand car rental solution",
-                        "link": "/pages/greenclick-valet-box"
+                        "name": "Example Tab",
+                        "description": "Example Tab Description",
+                        "link": ""
                     },
                     {
-                        "name": "Car Fleets",
-                        "description": "Our car fleets we deliver",
-                        "link": "/pages/car-fleets"
+                        "name": "Example Tab",
+                        "description": "Example Tab Description",
+                        "link": ""
                     },
                     {
-                        "name": "App & Technology",
-                        "description": "Our technical solutions to scale",
-                        "link": "/pages/app-and-technology"
+                        "name": "Example Tab",
+                        "description": "Example Tab Description",
+                        "link": ""
                     },
                     {
-                        "name": "Customer Relationships",
-                        "description": "Building strong customer relationships",
-                        "link": "/pages/customer-relationships"
+                        "name": "Example Tab",
+                        "description": "Example Tab Description",
+                        "link": ""
                     }
                 ]
             },
             {
-                "name": "Company",
+                "name": "Example Tab",
                 "tabs": [
                     {
-                        "name": "About",
-                        "description": "About Greenclick",
+                        "name": "Example Tab",
+                        "description": "Example Tab Description",
                         "link": "/pages/about-greenclick"
                     },
                     {
-                        "name": "Leadership",
-                        "description": "How we're changing the landscape of car rentals",
+                        "name": "Example Tab",
+                        "description": "Example Tab Description",
                         "link": "/pages/greenclick-team"
                     },
                     {
-                        "name": "Blog",
-                        "description": "See what greenclick is up to",
+                        "name": "Example Tab",
+                        "description": "Example Tab Description",
                         "link": "/blog"
                     }
                 ]
             },
             {
-                "name": "Contact",
+                "name": "Example Tab",
                 "tabs": [
                     {
-                        "name": "Contact Us",
-                        "description": "Want to work with greenclick, contact us",
-                        "link": "/pages/contact"
+                        "name": "Example Tab",
+                        "description": "Example Tab Description",
+                        "link": ""
                     }
                 ]
             }
         ],
         "buttton": {
-            "title": "Learn More",
-            "link": "/pages/about-greenclick"
+            "title": "CTA Button",
+            "link": ""
         }
     },
     "hero": {
+        "video": false,
         "video_1": "/hero-video.webm",
         "video_2": "/hero-video.mp4",
-        "cars" : [
-            {
-                "name": "2022 Hyundai Kona",
-                "img": "/hyundai-kona.png",
-                "alt": "Hyundai Kona"
-            },
-            {
-                "name": "2022 Veemo E-Bike",
-                "img": "/veemo.png",
-                "alt": "Veemo E-Bike Vehicle"
-            },
-            {
-                "name": "2022 Toyota Prius",
-                "img": "/hyundai-kona.png",
-                "alt": "Toyota Prius"
-            }
-        ],
+        "image": "/defaults/hero_default.png",
         "text": {
-            "primary": "Car Renting should be Comfortable",
-            "highlighted_word_primary": "Comfortable",
-            "secondary": "Rent your vehicle directly at your hotel, at any time. Greenclick is the first 24/7 car rental service operating at select hotels.",
-            "cta_button": "Learn More",
-            "link": "/pages/about-greenclick"
+            "primary": "Lorem ipsum dolor sit amet, ",
+            "highlighted_word_primary": "Consectetur",
+            "secondary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
+            "cta_button": "CTA Button",
+            "link": ""
         }
     },
     "rental": {
@@ -109,202 +94,193 @@
     },
     "side_one": {
         "text": {
-            "title": "Operating 24/7",
-            "description": "At any time throughout your hotel visit, purchase your car rental on our mobile app and head to the Greenclick Valet Box where you can access the keys to your vehicle.",
-            "description_title": "Greenclick Valet Kiosk",
-            "description_description": "The Greenclick Valet Kiosk stores your rental keys and is located inside the hotel lobby. You can access and return keys into the box by using our Greenclick App."
+            "title": "Lorem ipsum dolor",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            "description_title": "Lorem ipsum dolor",
+            "description_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
         },
         "images": {
-            "image1": "/gcbox.png",
-            "alt": " Realistic Greenclick Box"
+            "image1": "/defaults/square_default.png",
+            "alt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
         }
     },
     "side_two": {
         "text": {
-            "title": "Smart Cars, E-Bikes & More",
-            "description": "Greenclick offers an inventory of Cars and Mico Mobility such as E-Bikes, E-Scooters, and more. This makes getting around during your vacation more enjoyable and affordable.",
-            "description_title": "Veemo E-Bike",
-            "description_description": "Coming Soon."
+            "title": "Lorem ipsum dolor",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+            "description_title": "Lorem ipsum dolor",
+            "description_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
         },
         "images": {
-            "image1": "/veemo.png",
-            "alt": "Veemo E-Bike Vehicle"
+            "image1": "/defaults/square_default.png",
+            "alt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
         }
     },
     "banner_app": {
         "text": {
-            "title": "Confirm your Order on our Upcoming App",
-            "description": "Our app will be available on the AppStore & PlayStore where you will be able to purchase your vehicle to rent."
+            "title": "Lorem ipsum dolor sit amet",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
         },
         "images": {
-            "image1": "/phone.png",
-            "alt": "Iphone Mockup of Greenclick App"
+            "image1": "/defaults/square_default.png",
+            "alt": "Lorem ipsum dolor sit amet"
         }
     },
     "team": {
         "team": [
             {
-                "name": "Brian Cordero",
-                "description": "Founder, CEO at Greenclick Technologies",
-                "img": "/brian.png",
-                "banner": "/brian-car.png",
-                "alt": "Image of Car Vintage Porche Carerra",
-                "altUser": "Brian Cordero Profile Image Headshot",
-                "icons": [
-                    {
-                        "img": "/linkedin.svg",
-                        "url": "https://www.linkedin.com/in/brian-cordero-5a7a8416b/",
-                        "alt": "Linkedin Icon"
-                    }
-                ]
-            },
-            {
-                "name": "Sahil Sian",
-                "description": "Senior Frontend Developer & Designer - Co-Founder & CTO at Greenclick Technologies",
-                "img": "/sahil.jpg",
-                "banner": "/sahil-car.jpg",
-                "alt": "Image of Car Nissan 370z",
-                "altUser": "Sahil Sian Profile Image Headshot",
+                "name": "Lorem ipsum",
+                "description": "Lorem ipsum dolor sit amet",
+                "img": "/defaults/square_default.png",
+                "banner": "/defaults/banner_default.png",
+                "alt": "Lorem Ipsum Dolor",
+                "altUser": "Lorem Ipsum Dolor",
                 "icons": [
                     {
                         "img": "/linkedin.svg",
                         "url": "https://www.linkedin.com/in/sahil-sian-5305b7198/",
                         "alt": "Linkedin Icon"
-                    },
-                    {
-                        "img": "/code.svg",
-                        "url": "https://cssahil.com",
-                        "alt": "HTML Icon"
-                    },
-                    {
-                        "img": "/github.svg",
-                        "url": "https://github.com/sahilsian",
-                        "alt": "Github Icon"
                     }
                 ]
             },
             {
-                "name": "Max Zhang",
-                "description": "Incoming Investment Banking Summer Analyst @ Keybanc Capital Markets - CFO at Greenclick Technologies",
-                "img": "/max.jpg",
-                "banner": "/max-car.jpg",
-                "alt": "Roles Royce Wraith Vehicle",
-                "altUser": "Max Zhang Profile Image Headshot",
+                "name": "Lorem ipsum",
+                "description": "Lorem ipsum dolor sit amet",
+                "img": "/defaults/square_default.png",
+                "banner": "/defaults/banner_default.png",
+                "alt": "Lorem Ipsum Dolor",
+                "altUser": "Lorem Ipsum Dolor",
                 "icons": [
                     {
                         "img": "/linkedin.svg",
-                        "url": "https://www.linkedin.com/in/zhang-max/",
+                        "url": "https://www.linkedin.com/in/sahil-sian-5305b7198/",
                         "alt": "Linkedin Icon"
                     }
                 ]
             },
             {
-                "name": "Shadat Rahman",
-                "description": "Senior Software Engineer at Greenclick Technologies",
-                "img": "/default.jpg",
-                "banner": "/shadat_car.jpg",
-                "alt": "Image of Car Nissan GTR",
-                "altUser": "Shadat Rahman Profile Image Headshot",
+                "name": "Lorem ipsum",
+                "description": "Lorem ipsum dolor sit amet",
+                "img": "/defaults/square_default.png",
+                "banner": "/defaults/banner_default.png",
+                "alt": "Lorem Ipsum Dolor",
+                "altUser": "Lorem Ipsum Dolor",
                 "icons": [
                     {
                         "img": "/linkedin.svg",
-                        "url": "https://www.linkedin.com/in/shadat-rahman/",
+                        "url": "https://www.linkedin.com/in/sahil-sian-5305b7198/",
                         "alt": "Linkedin Icon"
-                    },
+                    }
+                ]
+            },
+            {
+                "name": "Lorem ipsum",
+                "description": "Lorem ipsum dolor sit amet",
+                "img": "/defaults/square_default.png",
+                "banner": "/defaults/banner_default.png",
+                "alt": "Lorem Ipsum Dolor",
+                "altUser": "Lorem Ipsum Dolor",
+                "icons": [
                     {
-                        "img": "/github.svg",
-                        "url": "https://github.com/sahilsian",
-                        "alt": "Github Icon"
+                        "img": "/linkedin.svg",
+                        "url": "https://www.linkedin.com/in/sahil-sian-5305b7198/",
+                        "alt": "Linkedin Icon"
                     }
                 ]
             }
         ],
         "text": {
-            "button": "Learn More"
+            "button": "CTA Button",
+            "link": "",
+            "title": "Lorem Ipsum Dolor"
         }
     },
     "footer": {
         "images": {
-            "backdrop": "/cityscape.svg",
-            "alt": "Illustration of Hotel and Greenclick Box"
+            "backdrop": "/defaults/banner_default.png",
+            "alt": "Example Banner"
+        },
+        "text": {
+            "email": "hello@example.com",
+            "copyright": "Copyright Example Sahil" 
         },
         "social": [
             {
                 "img": "/linkedin.svg",
-                "url": "https://www.linkedin.com/company/greenclick-technologies/",
+                "url": "",
                 "alt": "Linkedin Icon"
             },
             {
                 "img": "/twitter.svg",
-                "url": "https://twitter.com/greenclicktech",
+                "url": "",
                 "alt": "Twitter Icon"
             },
             {
                 "img": "/instagram.svg",
-                "url": "https://www.instagram.com/greenclicktechnologies/",
+                "url": "",
                 "alt": "Instagram Icon"
             }
         ],
         "tabs": [
             {
-                "name": "Products & Services",
+                "name": "Example Tab",
                 "tabs": [
                     {
-                        "name": "Valet Box",
-                        "description": "Greenclick's on demand car rental solution",
-                        "link": "/pages/greenclick-valet-box"
+                        "name": "Example Tab",
+                        "description": "Example Tab Description",
+                        "link": ""
                     },
                     {
-                        "name": "Car Fleets",
-                        "description": "Our car fleets we deliver",
-                        "link": "/pages/car-fleets"
+                        "name": "Example Tab",
+                        "description": "Example Tab Description",
+                        "link": ""
                     },
                     {
-                        "name": "App & Technology",
-                        "description": "Our technical solutions to scale",
-                        "link": "/pages/app-and-technology"
+                        "name": "Example Tab",
+                        "description": "Example Tab Description",
+                        "link": ""
                     },
                     {
-                        "name": "Customer Relationships",
-                        "description": "Building strong customer relationships",
-                        "link": "/pages/customer-relationships"
+                        "name": "Example Tab",
+                        "description": "Example Tab Description",
+                        "link": ""
                     }
                 ]
             },
             {
-                "name": "Company",
+                "name": "Example Tab",
                 "tabs": [
                     {
-                        "name": "About",
-                        "description": "About Greenclick",
-                        "link": "/pages/about-greenclick"
+                        "name": "Example Tab",
+                        "description": "Example Tab Description",
+                        "link": ""
                     },
                     {
-                        "name": "Leadership",
-                        "description": "How we're changing the landscape of car rentals",
-                        "link": "/pages/greenclick-team"
+                        "name": "Example Tab",
+                        "description": "Example Tab Description",
+                        "link": ""
                     },
                     {
-                        "name": "Blog",
-                        "description": "See what greenclick is up to",
-                        "link": "/blog"
+                        "name": "Example Tab",
+                        "description": "Example Tab Description",
+                        "link": ""
                     }
                 ]
             },
             {
-                "name": "Contact",
+                "name": "Example Tab",
                 "tabs": [
                     {
-                        "name": "Contact Us",
-                        "description": "Want to work with greenclick, contact us",
-                        "link": "/pages/contact"
+                        "name": "Example Tab",
+                        "description": "Example Tab Description",
+                        "link": ""
                     }
                 ]
             }
         ]
     },
     "head": {
-        "title": "Greenclick Technologies"
+        "title": "Example Site"
     },
     "photos": {
         "title": "Gallery",
@@ -319,13 +295,20 @@
         ]
     },
     "blog": {
-        "title": "Stories on Greenclick"
+        "title": "Example Blog",
+        "items_show_more": 0
     },
     "metadata": {
-        "site_title": "Greenclick Technologies | First 24/7 Contactless Hotel Car Rental Service ",
-        "short_title": "| Greenclick Technologies",
-        "site_description": "Worlds first 24/7 car rental service at hotels. Completing the end-to-end vacation experience for guests.",
-        "site_image": "/banner.png",
-        "alt": "Banner for Greenclick Technologies"
+        "site_title": "Example Site | Lorem Ipsum Dolor",
+        "short_title": "| Example Site",
+        "site_description": "Lorem",
+        "site_image": "",
+        "alt": "Lorem"
+    },
+    "contact": {
+        "text": {
+            "title": "Lorem",
+            "description": "Lorem ipsum dolor sit amet"
+        }
     }
 }

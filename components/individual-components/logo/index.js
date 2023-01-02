@@ -29,7 +29,7 @@ const Logo = ({image, paddingbottom}) => {
 }
 
 Logo.defaultProps = {
-    image: '/greenclick-long.svg'
+    image: '/defaults/logo_default.png'
 }
 
 export default Logo

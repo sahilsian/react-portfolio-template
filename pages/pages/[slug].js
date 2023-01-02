@@ -129,7 +129,7 @@ const PostPage = ({
   }
 
   useEffect(() => {
-    setRandomPosts(getRandom(posts, 4));
+    setRandomPosts(getRandom(posts, config.blog.items_show_more));
   }, []);
   const { width, height } = useWindowDimensions();
   return (

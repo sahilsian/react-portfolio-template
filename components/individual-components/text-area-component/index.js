@@ -3,13 +3,14 @@ import styled from 'styled-components'
 import config from '../../../config.json'
 import Input from '../input';
 import TextLabel from '../text-label';
+import TextArea from '../textarea';
 
 const Container = styled.div`
     width: 100%;
     padding-bottom: ${props=>props.padding};
 `;
 
-const InputComponent = ({placeholder, onChange,text,labelsize,color,size, noIcon, padding}) => {
+const TextAreaComponent = ({placeholder, onChange,text,labelsize,color,size, noIcon, padding}) => {
     return (
         <Container
             padding={padding} 
@@ -20,18 +21,18 @@ const InputComponent = ({placeholder, onChange,text,labelsize,color,size, noIcon
             color={color}
             >
             </TextLabel>
-            <Input 
+            <TextArea 
             noIcon={noIcon}
             placeholder={placeholder}
             onChange={onChange}
             size={size}
-            ></Input>
+            ></TextArea>
         </Container>
     )
 }
 
-InputComponent.defaultProps = {
+TextAreaComponent.defaultProps = {
     padding: "20px"
 }
 
-export default InputComponent
+export default TextAreaComponent

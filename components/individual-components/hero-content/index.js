@@ -4,6 +4,7 @@ import config from '../../../config.json'
 import CarCardLarge from '../car-card-large';
 import CustomButton from '../custom-button';
 import useWindowDimensions from '../../../hooks/useWIndowDimensions';
+import HeroImage from '../hero-image';
 
 const Container = styled.div`
     width: 100%;
@@ -83,8 +84,7 @@ const HeroContent = () => {
             </FlexContainer>
                 
             <FlexContainer justify={width < 1100 ? false : true} flex={1} flexedit>
-                <CarCardLarge>
-                </CarCardLarge>
+                <HeroImage src={config.hero.image}></HeroImage>
             </FlexContainer>
         </Container>
     )

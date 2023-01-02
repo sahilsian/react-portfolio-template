@@ -21,7 +21,7 @@ const IconContainer = styled.div`
     padding: 0px 5px;
 `;
 
-const InputPiece = styled.input`
+const InputPiece = styled.textarea`
     width: 100%;
     border-radius: 10px;
     border: none;
@@ -29,32 +29,17 @@ const InputPiece = styled.input`
     box-sizing: border-box;
     font-size: ${props=>props.size ? "16px" : "18px"};
     background-color: transparent;
-    outline: none;  
+    outline: none;
+    min-height: 200px;  
     
 `;
 
-const Input = ({placeholder, value, onChange, size, noIcon}) => {
+const TextArea = ({placeholder, value, onChange, size, noIcon}) => {
     const {width, height} = useWindowDimensions()
     const [focus, setFocus] = useState(false)
     return (
         <Container>
-            <IconContainer>
-                {
-                    noIcon 
-                    ?
-                    null
-                    :
-                    <Search
-                    style={{
-                        marginTop: "7px"
-                    }}
-                    width={"20px"}
-                    color={"#00000050"}
-                >
-                </Search>
-                }
-                
-            </IconContainer>
+            <IconContainer></IconContainer>
             <InputPiece 
             onFocus={()=>{setFocus(true)}}
             onBlur={()=>{setFocus(false)}}
@@ -68,8 +53,8 @@ const Input = ({placeholder, value, onChange, size, noIcon}) => {
     )
 }
 
-Input.defaultProps = {
+TextArea.defaultProps = {
     placeholder: "Type here..."
 }
 
-export default Input
+export default TextArea

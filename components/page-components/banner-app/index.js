@@ -12,6 +12,7 @@ const BannerApp = () => {
     return (
         <Container>
             <Banner
+                image={config.banner_app.images.image1}
                 title={config.banner_app.text.title}
                 description={config.banner_app.text.description}
                 alt={config.banner_app.images.alt}

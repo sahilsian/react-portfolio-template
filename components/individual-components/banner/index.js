@@ -72,11 +72,11 @@ const Banner = ({image, title, description, alt}) => {
                     <BadgeContainer justify={width < 980}>
 
                     <Badge 
-                    src='/app-store.svg'
+                    src='/defaults/app-store.svg'
                     width={"150px"}
                     ></Badge>
                     <Badge 
-                    src='/play-store.png'
+                    src='/defaults/play-store.png'
                     width={"132px"}
                     ></Badge>
                     </BadgeContainer>
@@ -88,7 +88,7 @@ const Banner = ({image, title, description, alt}) => {
 }
 
 Banner.defaultProps = {
-    image: "/phone.png"
+    image: "/defaults/square_default.png"
 }
 
 export default Banner
