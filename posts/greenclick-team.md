@@ -23,7 +23,7 @@ Brian Cordero started Greenclick Technologies in December 2019 after dropping ou
 ![Image of Greenclick Technologies Co-Founder & CTO, Sahil Sian](/sahil.png)
 *Image of Co-Founder & CTO, Sahil Sian*
 
-Sahil Sian is a Senior Frontend Developer & Designer graduating from the British Columbia Institute of Technology and is currently enrolled in BCS at Dalhousie University. Sahil joined Greenclick Technologies as a Technical Co-Founder in January 2022 and has led multiple projects such as the Greenclick Web & Mobile Applications, Valet Box Server-Side, and other internal projects. Sahil is interested in technologies such as React, React Native, and NextJS as well as methodologies to increase technical products such as agile. Furthermore, Sahil has been a national-level competitor in traditional high school art and is translating his creativity into effective web design.
+Sahil Sian is a Senior Frontend Developer & Designer graduating from the British Columbia Institute of Technology and is currently enrolled in BCS at Dalhousie University. Sahil joined Greenclick Technologies as a Technical Co-Founder in January 2022 and has led multiple projects such as the Greenclick Web & Mobile Applications, Valet Box Server-Side, and other internal projects. Sahil is interested in technologies such as React, React Native, and NextJS as well as methodologies to increase technical productivity such as agile. Furthermore, Sahil has been a national-level competitor in traditional high school art and is translating his creativity into effective web design.
 
 ## CFO, Max Zhang
 
