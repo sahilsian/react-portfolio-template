@@ -25,6 +25,8 @@ function HomePage() {
         <Hero></Hero>
         <Rental></Rental>
         <Info
+        descriptiondescription={config.side_one.text.description_description}
+        descriptiontitle={config.side_one.text.description_title}
           title={config.side_one.text.title}
           description={config.side_one.text.description}
           src={config.side_one.images.image1}
@@ -33,6 +35,8 @@ function HomePage() {
         </Info>
         <Info
           maindirection
+          descriptiondescription={config.side_two.text.description_description}
+          descriptiontitle={config.side_two.text.description_title}
           title={config.side_two.text.title}
           description={config.side_two.text.description}
           src={config.side_two.images.image1}

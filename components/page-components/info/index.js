@@ -7,10 +7,12 @@ const Container = styled.div`
     width: 100%;
     padding: 50px 0px;
 `;
-const Info = ({title, description, src, maindirection, reverse, alt}) => {
+const Info = ({title, description, src, maindirection, reverse, alt,descriptiontitle,descriptiondescription}) => {
     return (
         <Container>
         <SideSide
+            descriptiontitle={descriptiontitle}
+            descriptiondescription={descriptiondescription}
             maindirection={maindirection}
             title={title}
             description={description}
