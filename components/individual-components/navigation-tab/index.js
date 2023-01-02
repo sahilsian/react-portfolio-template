@@ -13,6 +13,7 @@ const TabText = styled.p`
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
+    text-decoration: none;
 `;
 
 const Container = styled.div`
